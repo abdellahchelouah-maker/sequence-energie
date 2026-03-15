@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activité 5 – VAE · Séquence F</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="inner">
+    <div class="badge">Module 1 · Activité 5 / 6</div>
+    <h1>🚲 Le vélo à assistance électrique (VAE)</h1>
+    <p class="meta">Séquence F · 2nde / 1re STI2D ·
+      ⏱ 3h · Travail individuel ou binôme</p>
+  </div>
+</header>
+
+<!-- ── BARRE NAVIGATION ACTIVITÉS ── -->
+<nav class="nav-activites">
+  <div class="nav-activites-inner">
+    <a href="../index.html" class="nav-home-btn">⌂ Séquence F</a>
+    <span class="nav-sep">›</span>
+    <span class="nav-module-label">Module 1</span>
+    <span class="nav-sep">›</span>
+    <div class="nav-acts">
+      <a href="activite-energies.html"
+         class="nav-act">1 · Énergies</a>
+      <a href="activite-photovoltaique.html"
+         class="nav-act mod-teal">2 · Photovoltaïque</a>
+      <a href="activite-chaine-energie-MAS.html"
+         class="nav-act mod-violet">3 · MAS</a>
+      <a href="activite-pneumatique.html"
+         class="nav-act mod-orange">4 · Pneumatique</a>
+      <a href="activite-vae-voiture.html"
+         class="nav-act mod-vert active">5 · VAE</a>
+      <a href="activite-voiture-demain.html"
+         class="nav-act mod-cyan">6 · Voiture demain</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ── OBJECTIFS ── -->
+  <div class="bloc">
+    <h2>🎯 Objectif de l'activité</h2>
+    <p>
+      Réaliser l'<strong>étiquette énergétique du vélo à assistance électrique</strong>.
+      Pour la caractériser, deux paramètres sont à définir :
+    </p>
+    <ul>
+      <li>Les <strong>émissions de gaz à effet de serre</strong> du VAE.</li>
+      <li>Sa <strong>consommation énergétique</strong> ramenée en litre
+          équivalent essence.</li>
+    </ul>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/etiquette-vae.png"
+           alt="Étiquette énergétique du VAE"
+           style="max-width:420px; width:100%; border-radius:8px;
+                  box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+      <figcaption>Étiquette énergétique du VAE.</figcaption>
+    </figure>
+    <div style="margin-top:.8rem;">
+      <span class="tag">Travail individuel ou binôme</span>
+      <span class="tag">Durée : 3h</span>
+    </div>
+  </div>
+
+  <!-- Vidéo intro -->
+  <div class="notice-audio">
+    <span>🎧</span> Brancher les écouteurs avant de lancer la vidéo.
+  </div>
+
+  <div class="bloc">
+    <h2>🎬 Vidéo – Introduction au VAE</h2>
+    <div style="position:relative; width:100%; aspect-ratio:16/9;
+                border-radius:12px; overflow:hidden;
+                box-shadow:0 8px 24px rgba(0,0,0,0.15);">
+      <video controls preload="metadata" poster="../images/vae-poster.jpg"
+             style="position:absolute;top:0;left:0;
+                    width:100%;height:100%;
+                    object-fit:contain;background:#000;">
+        <source src="../videos/vae.mp4" type="video/mp4">
+        <p>Ce navigateur ne supporte pas la lecture vidéo.
+           <a href="../videos/vae.mp4">Télécharger la vidéo</a>.
+        </p>
+      </video>
+    </div>
+  </div>
+
+  <!-- ── RESSOURCES ── -->
+  <div class="bloc bloc-ressources">
+    <h2>📥 Ressources – Documents de travail</h2>
+    <p class="bloc-intro">Télécharger les documents nécessaires :</p>
+    <ul class="liste-telechargements">
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">VAE – Sujet + Document réponse</span>
+        <div class="doc-liens">
+          <a href="../docs/vae-voiture SU DR.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+          <a href="../docs/vae-voiture SU DR.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 1 – CONSOMMATION ÉNERGÉTIQUE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🔋 Partie 1 – Consommation énergétique du VAE
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Trajet testé</h2>
+    <div class="cours">
+      <h3>📍 Trajet de référence : 8 km</h3>
+      <ul style="margin:.4rem 0 0 1rem; font-size:.9rem;">
+        <li>5 km montée 3 % à 15 km/h – assistance niveau 2</li>
+        <li>3 km descente −5 % à 19 km/h – régénération niveau 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1.1 Mesure 1,6 km -->
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">1.1</div>
+      <div class="titre">Mesure de l'énergie sur un trajet de 1,6 km</div>
+    </div>
+    <div class="exo-body">
+      <figure style="text-align:center; margin:0 0 1rem;">
+        <img src="../images/assistance-electrique-vae.PNG"
+             alt="Bilan énergie trajet 1,6 km"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Exemple de trajet effectué par un VAE.</figcaption>
+      </figure>
+
+      <p><strong>Valeurs mesurées sur 1,6 km (données) :</strong></p>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Énergie consommée (Wh)</th>
+            <th>Énergie récupérée (Wh)</th>
+            <th>Énergie nette (Wh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Mesures 1,6 km</td>
+            <td>2,6</td>
+            <td>1,2</td>
+            <td>1,4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 1.2 Extrapolation 8 km -->
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">1.2</div>
+      <div class="titre">Extrapolation – Énergie sur le trajet complet de 8 km</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        En déduire par extrapolation l'énergie sur 8 km
+        (facteur = 8 / 1,6 = 5) :
+      </div>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Énergie consommée (Wh)</th>
+            <th>Énergie récupérée (Wh)</th>
+            <th>Énergie nette (Wh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Trajet 8 km</td>
+            <td><input type="number" placeholder="…"></td>
+            <td><input type="number" placeholder="…"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Facteur = 8 / 1,6 =
+            <span class="br">5</span></p>
+          <p>Consommée = 2,6 × 5 =
+            <span class="br">13 Wh</span></p>
+          <p>Récupérée = 1,2 × 5 =
+            <span class="br">6 Wh</span></p>
+          <p>Nette = 1,4 × 5 =
+            <span class="br">7 Wh</span>
+            (= 13 − 6)</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 1.3 Recharge batterie -->
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">1.3</div>
+      <div class="titre">Énergie réseau pour recharger la batterie</div>
+    </div>
+    <div class="exo-body">
+      <figure style="text-align:center; margin:0 0 1rem;">
+        <img src="../images/batterie-vae.PNG"
+             alt="Schéma chargeur batterie VAE"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Chargeur (rendement 90 %) → batterie → réseau électrique.</figcaption>
+      </figure>
+
+      <div class="fml-bloc">
+        <div class="fml">
+          E<sub>réseau</sub> = E<sub>nette</sub> / η<sub>chargeur</sub>
+        </div>
+        <div class="fml-detail">
+          η<sub>chargeur</sub> = 0,9 ·
+          E<sub>nette</sub> = valeur calculée en 1.2
+        </div>
+      </div>
+
+      <p>Calculer l'énergie que doit fournir le réseau :</p>
+      <input class="ligne" type="text"
+             placeholder="E_réseau = … / 0,9 = … Wh">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>E<sub>réseau</sub> = 7 / 0,9 =
+            <span class="br">7,78 Wh</span>
+            (≈ 8 Wh arrondi)
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 2 – ÉMISSIONS CO2
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🌿 Partie 2 – Émissions de gaz à effet de serre
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Mix électrique français</h2>
+    <div class="cours">
+      <h3>🌐 Site RTE Eco2mix</h3>
+      <p>La batterie a été chargée la veille du TP à 19h00.
+        Consulter les émissions de CO₂ par kWh sur le site RTE :</p>
+    </div>
+    <div class="def">
+      <a href="http://www.rte-france.com/fr/eco2mix/eco2mix-co2"
+         target="_blank" rel="noopener"
+         style="color:var(--vert); font-weight:600;">
+        ↗ RTE Eco2mix – taux CO₂ du mix électrique français
+      </a>
+    </div>
+  </div>
+
+  <!-- 2.1 Production électrique -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">2.1</div>
+      <div class="titre">Production électrique France – 19h00 la veille du TP</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Consulter RTE et noter les puissances relevées (en MW) :
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="tl">
+          <thead>
+            <tr>
+              <th>Total (MW)</th>
+              <th>Nucléaire</th>
+              <th>Hydraulique</th>
+              <th>Éolien</th>
+              <th>Gaz</th>
+              <th>Charbon</th>
+              <th>Fioul</th>
+              <th>Solaire</th>
+              <th>Bioéner.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="number" placeholder="…" style="width:70px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+              <td><input type="number" placeholder="…" style="width:65px;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.2 + 2.3 -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">2.2–2.3</div>
+      <div class="titre">Taux CO₂ et émissions du VAE</div>
+    </div>
+    <div class="exo-body">
+      <p><strong>Q2.2.</strong> Taux d'émission de gaz à effet de serre :</p>
+      <input class="ligne" type="text"
+             placeholder="Taux = … g CO₂/kWh  (lu sur RTE)">
+
+      <p style="margin-top:.8rem;"><strong>Q2.3.</strong> Calculer les émissions
+        du VAE pour le trajet 8 km :</p>
+      <input class="ligne" type="text"
+             placeholder="Émissions = E_réseau × taux / 1000 = … g CO₂">
+      <input class="ligne" type="text"
+             placeholder="Taux par km = … / 8 = … g CO₂/km">
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/emission-co2-vae.PNG"
+             alt="Échelle d'émissions CO₂"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Positionner le VAE sur cette échelle d'émissions CO₂.</figcaption>
+      </figure>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Taux typique (19h, France) :
+            <span class="br">50–100 g CO₂/kWh</span>.</p>
+          <p>Émissions 8 km = 7,78 Wh × (taux / 1 000) ≈
+            <span class="br">0,4–0,8 g CO₂</span>.</p>
+          <p>Par km ≈
+            <span class="br">0,05–0,1 g CO₂/km</span>
+            (très faible vs voiture thermique ~150–200 g/km).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 3 – LITRE ÉQUIVALENT ESSENCE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    ⛽ Partie 3 – Estimation en litres équivalent essence
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">3</div>
+      <div class="titre">Consommation VAE en L équivalent essence / 100 km</div>
+    </div>
+    <div class="exo-body">
+      <div class="def">
+        <strong>Équivalences :</strong>
+        1 L essence = 9,63 kWh · 1 L diesel = 10,74 kWh
+      </div>
+
+      <div class="fml-bloc">
+        <div class="fml">
+          E<sub>100km</sub> = E<sub>réseau/8km</sub> × (100 / 8) (Wh)
+        </div>
+        <div class="fml-detail">
+          puis : L/100km = E<sub>100km</sub> / 9 630
+        </div>
+      </div>
+
+      <p>Calculer l'énergie réseau pour 100 km :</p>
+      <input class="ligne" type="text"
+             placeholder="E_100km = 7,78 × (100/8) = … Wh">
+      <p>Calculer la consommation en L équivalent essence / 100 km :</p>
+      <input class="ligne" type="text"
+             placeholder="Conso = … / 9 630 = … L/100 km">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>E<sub>100km</sub> = 7,78 × 12,5 =
+            <span class="br">97,25 Wh</span></p>
+          <p>L/100 km = 97,25 / 9 630 ≈
+            <span class="br">0,01 L/100 km</span>
+            (très faible !)
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 4 – ÉTIQUETTE + COMPARAISON
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    📊 Partie 4 – Étiquette énergétique et comparaison VAE / voiture
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Données de référence</h2>
+    <div class="grid2">
+      <div class="cours" style="margin:0;">
+        <h3>🚗 Véhicule de référence</h3>
+        <strong>Peugeot 207 diesel</strong> (faible consommation)
+      </div>
+      <div class="cours" style="margin:0;
+           background:var(--vert-pale); border-color:var(--vert);">
+        <h3 style="color:var(--vert);">📅 Trajet</h3>
+        <strong>7 km</strong> · 5 jours/semaine · 45 semaines/an
+      </div>
+    </div>
+    <div class="def" style="margin-top:.8rem;">
+      <strong>Équivalences énergétiques :</strong>
+      1 L essence = 34,66 MJ = <strong>9,63 kWh</strong> ·
+      1 L diesel = 38,68 MJ = <strong>10,74 kWh</strong>
+    </div>
+    <div class="att" style="margin-top:.6rem;">
+      <strong>🌐 Question 4.4 :</strong> rechercher en ligne le prix actuel
+      du gasoil et le prix TTC de l'électricité (tarif bleu EDF).
+    </div>
+
+    <div class="grid2" style="margin-top:1rem;">
+      <figure style="text-align:center; margin:0;">
+        <img src="../images/modele-vehicule-vae.PNG"
+             alt="Modèle véhicule VAE"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Modèle véhicule VAE à compléter.</figcaption>
+      </figure>
+      <figure style="text-align:center; margin:0;">
+        <img src="../images/etiquette-vae-2.png"
+             alt="Modèle étiquette énergétique"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Modèle d'étiquette à compléter.</figcaption>
+      </figure>
+    </div>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/etiquette-vae-comparaison.PNG"
+           alt="Modèle comparaison étiquette énergétique"
+           style="max-width:100%; border-radius:8px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Tableau de comparaison à compléter.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 4.1 Distance annuelle -->
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">4.1</div>
+      <div class="titre">Distance annuelle domicile-travail</div>
+    </div>
+    <div class="exo-body">
+      <table class="tl">
+        <thead>
+          <tr>
+            <th>Trajet (km)</th>
+            <th>Jours/semaine</th>
+            <th>Semaines/an</th>
+            <th>Distance totale (km/an)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7</td>
+            <td>5</td>
+            <td>45</td>
+            <td><input type="number" placeholder="résultat"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>7 × 5 × 45 =
+            <span class="br">1 575 km/an</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4.2 Bilan CO2 -->
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">4.2</div>
+      <div class="titre">Bilan des émissions de gaz à effet de serre</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Calculer les émissions annuelles de CO₂ pour chaque véhicule,
+        puis l'économie réalisée.
+      </div>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Véhicule</th>
+            <th>g CO₂/km</th>
+            <th>Distance/an (km)</th>
+            <th>Émissions/an (kg CO₂)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">VAE</td>
+            <td><input type="number" placeholder="Q2.3"></td>
+            <td><input type="number" placeholder="Q4.1"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Peugeot 207 diesel</td>
+            <td><input type="number" placeholder="constructeur"></td>
+            <td><input type="number" placeholder="Q4.1"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr style="background:#f0fdf4;">
+            <td class="gauche" colspan="3">
+              <strong>Économie annuelle (kg CO₂)</strong>
+            </td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>VAE : ~0,1 × 1 575 / 1 000 ≈
+            <span class="br">0,16 kg CO₂/an</span></p>
+          <p>207 diesel : ~120 × 1 575 / 1 000 ≈
+            <span class="br">189 kg CO₂/an</span></p>
+          <p>Économie ≈
+            <span class="br">189 kg CO₂/an</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4.3 Bilan consommation -->
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">4.3</div>
+      <div class="titre">Bilan de la consommation énergétique</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Calculer les consommations annuelles, puis l'économie réalisée.
+      </div>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Véhicule</th>
+            <th>L/100 km</th>
+            <th>Distance/an (km)</th>
+            <th>Conso/an (L)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">VAE (éq. essence)</td>
+            <td><input type="number" placeholder="Q3"></td>
+            <td><input type="number" placeholder="Q4.1"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Peugeot 207 diesel</td>
+            <td><input type="number" placeholder="constructeur"></td>
+            <td><input type="number" placeholder="Q4.1"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr style="background:#f0fdf4;">
+            <td class="gauche" colspan="3">
+              <strong>Économie annuelle (L)</strong>
+            </td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>VAE : ~0,01 × 1 575 / 100 ≈
+            <span class="br">0,16 L/an</span></p>
+          <p>207 diesel : ~4,5 × 1 575 / 100 ≈
+            <span class="br">70,9 L/an</span></p>
+          <p>Économie ≈
+            <span class="br">70,7 L/an</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4.4 Bilan économique -->
+  <div class="exo">
+    <div class="exo-hdr mod-vert"
+         style="background:linear-gradient(90deg,var(--vert),#2e7d32);">
+      <div class="num">4.4</div>
+      <div class="titre">Bilan économique – Prix relevés en ligne</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Rechercher en ligne le prix actuel du gasoil et de l'électricité
+        (tarif bleu EDF), puis calculer le coût annuel.
+      </div>
+
+      <p><strong>Prix relevés :</strong></p>
+      <table class="tl" style="margin-bottom:1rem;">
+        <thead>
+          <tr>
+            <th class="gauche">Énergie</th>
+            <th>Prix relevé</th>
+            <th>Unité</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Gasoil</td>
+            <td><input type="number" step="0.001" placeholder="ex. 1,75"></td>
+            <td>€/L</td>
+            <td><input type="text" placeholder="site consulté…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Électricité (tarif bleu)</td>
+            <td><input type="number" step="0.001" placeholder="ex. 0,25"></td>
+            <td>€/kWh</td>
+            <td><input type="text" placeholder="site consulté…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Coût annuel :</strong></p>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Véhicule</th>
+            <th>Consommation/an</th>
+            <th>Prix unitaire</th>
+            <th>Coût/an (€)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">VAE</td>
+            <td><input type="number" placeholder="Wh (Q4.3)"></td>
+            <td><input type="number" placeholder="€/kWh"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Peugeot 207 diesel</td>
+            <td><input type="number" placeholder="L (Q4.3)"></td>
+            <td><input type="number" placeholder="€/L"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr style="background:#f0fdf4;">
+            <td class="gauche" colspan="3">
+              <strong>Économie annuelle (€)</strong>
+            </td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>4.1.</strong>
+            7 × 5 × 45 = <span class="br">1 575 km/an</span></p>
+          <p><strong>4.2.</strong>
+            VAE ≈ <span class="br">0,16 kg CO₂/an</span> ·
+            207 diesel ≈ <span class="br">189 kg CO₂/an</span> ·
+            Économie ≈ <span class="br">189 kg CO₂/an</span>
+          </p>
+          <p><strong>4.3.</strong>
+            VAE ≈ <span class="br">0,16 L/an</span> ·
+            207 diesel ≈ <span class="br">70,9 L/an</span> ·
+            Économie ≈ <span class="br">70,7 L/an</span>
+          </p>
+          <p><strong>4.4.</strong> (valeurs indicatives à ajuster)<br>
+            Gasoil ~1,75 €/L → voiture :
+            <span class="br">70,9 × 1,75 ≈ 124 €/an</span><br>
+            Électricité ~0,25 €/kWh → VAE :
+            <span class="br">~1 €/an</span><br>
+            Économie ≈ <span class="br">~123 €/an</span>
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ── À RETENIR ── -->
+  <section style="background:var(--blanc);
+    border:2px solid var(--vert);
+    border-left:6px solid var(--vert);
+    border-radius:8px; padding:1.4rem 1.8rem;
+    margin-bottom:2rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.07);">
+    <h2 style="color:var(--vert); font-size:1.1rem;
+               font-weight:800; margin-bottom:.9rem;">
+      📌 À retenir – Bilan VAE vs voiture
+    </h2>
+
+    <figure style="text-align:center; margin:0 0 1rem;">
+      <img src="../images/comparaison-voiture-vae.png"
+           alt="Comparaison VAE vs voiture diesel"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+      <figcaption>Comparaison VAE vs voiture diesel
+        (CO₂, consommation, coût).</figcaption>
+    </figure>
+
+    <div class="grid2">
+      <div>
+        <p style="font-weight:700; color:var(--vert); margin-bottom:.3rem;">
+          🌿 Avantages environnementaux
+        </p>
+        <ul style="font-size:.88rem; margin-left:1.1rem;">
+          <li>CO₂ : VAE ~100–1000× moins émetteur</li>
+          <li>Conso : ~500× moins énergivore</li>
+          <li>(0,01 L/100 km vs ~5 L/100 km)</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700; color:var(--orange); margin-bottom:.3rem;">
+          💶 Avantages économiques
+        </p>
+        <ul style="font-size:.88rem; margin-left:1.1rem;">
+          <li>Coût VAE ≈ 1 €/an</li>
+          <li>Coût voiture diesel ≈ 100–150 €/an</li>
+          <li>Économie ≈ ~123 €/an sur ce trajet</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVIGATION BAS ── -->
+  <nav class="nav-bas">
+    <a href="activite-pneumatique.html" class="nav-btn">
+      ← Précédent<span>4. Pneumatique</span>
+    </a>
+    <div class="centre">Module 1 · Activité 5 / 6 · VAE</div>
+    <a href="activite-voiture-demain.html" class="nav-btn">
+      Suivant →<span>6. Voiture de demain</span>
+    </a>
+  </nav>
+
+</div><!-- /page -->
+
+<footer>
+  <p>Séquence F – STI2D · Lycée ·
+  <a href="../index.html">Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>

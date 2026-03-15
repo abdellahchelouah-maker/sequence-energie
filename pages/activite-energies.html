@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activité 1 – Les énergies · Séquence F</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="inner">
+    <div class="badge">Module 1 · Activité 1 / 6</div>
+    <h1>🔋 Les énergies – Formes, conversions et ressources</h1>
+    <p class="meta">Séquence F · 2nde / 1re STI2D · ⏱ 3h · Travail individuel</p>
+  </div>
+</header>
+
+
+<!-- ── BARRE NAVIGATION ACTIVITÉS ── -->
+<nav class="nav-activites">
+  <div class="nav-activites-inner">
+    <a href="../index.html" class="nav-home-btn">⌂ Séquence F</a>
+    <span class="nav-sep">›</span>
+    <span class="nav-module-label">Module 1</span>
+    <span class="nav-sep">›</span>
+    <div class="nav-acts">
+      <a href="activite-energies.html"
+         class="nav-act active">1 · Énergies</a>
+      <a href="activite-photovoltaique.html"
+         class="nav-act mod-teal">2 · Photovoltaïque</a>
+      <a href="activite-chaine-energie-MAS.html"
+         class="nav-act mod-violet">3 · MAS</a>
+      <a href="activite-pneumatique.html"
+         class="nav-act mod-orange">4 · Pneumatique</a>
+      <a href="activite-vae-voiture.html"
+         class="nav-act mod-vert">5 · VAE</a>
+      <a href="activite-voiture-demain.html"
+         class="nav-act mod-cyan">6 · Voiture demain</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ── OBJECTIFS ── -->
+  <div class="bloc">
+    <h2>🎯 Compétences et objectifs</h2>
+    <div class="grid2">
+      <div class="cours" style="margin:0;">
+        <h3>CO3.1</h3>
+        Identifier et caractériser les fonctions et constituants d'un système énergétique
+      </div>
+      <div class="cours" style="margin:0;
+           background:var(--vert-pale); border-color:var(--vert);">
+        <h3 style="color:var(--vert);">CO3.2</h3>
+        Identifier l'agencement matériel d'un produit de conversion d'énergie
+      </div>
+    </div>
+    <div class="tip" style="margin-top:.9rem;">
+      <strong>Mini-site de ressource :</strong> ouvrir le lien ci-dessous avant de commencer.
+    </div>
+    <p style="margin-top:.8rem;"><strong>Problématique :</strong>
+      L'énergie se présente sous de nombreuses formes et peut être convertie.
+    </p>
+    <ul>
+      <li>Quelles sont les différentes formes d'énergie et comment les convertir ?</li>
+      <li>D'où provient l'énergie que nous consommons et quelles sont les ressources de demain ?</li>
+    </ul>
+  </div>
+
+  <!-- ── RESSOURCES ── -->
+  <div class="bloc bloc-ressources">
+    <h2>📥 Ressources – Documents de travail</h2>
+    <p class="bloc-intro">Télécharger les documents nécessaires pour réaliser l'activité :</p>
+    <ul class="liste-telechargements">
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">Les énergies – Sujet + Document réponse</span>
+        <div class="doc-liens">
+          <a href="../docs/les energies SU DR.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+          <a href="../docs/les energies SU DR v2.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── MINI-SITE ── -->
+  <div class="bloc objectif">
+    <h2>🌐 Mini-site interactif</h2>
+    <div class="tip">
+      Ouvrir le mini-site ci-dessous, prendre connaissance du chapitre
+      <strong>« Présentation »</strong>, puis réaliser les activités et
+      compléter ce document réponse.
+    </div>
+    <div style="text-align:center; margin:1.2rem 0;">
+      <a href="../Energie HTML/index.html" target="_blank" rel="noopener"
+         style="display:inline-block; background:var(--bleu);
+                color:#fff; font-weight:700; font-size:0.95rem;
+                padding:0.75rem 1.8rem; border-radius:12px;
+                text-decoration:none;
+                box-shadow:0 4px 14px rgba(25,118,210,0.3);
+                transition:opacity 0.15s;">
+        Ouvrir le mini-site sur l'énergie →
+      </a>
+    </div>
+    <div class="grille-illu">
+      <figure class="illu-item">
+        <img src="../images/navigateurs.PNG"
+             alt="Navigateurs recommandés" class="illu-img">
+        <figcaption>Navigateurs à utiliser</figcaption>
+      </figure>
+      <figure class="illu-item">
+        <img src="../images/site-web.PNG"
+             alt="Site web ouvert" class="illu-img">
+        <figcaption>Site web à ouvrir</figcaption>
+      </figure>
+    </div>
+    <div style="margin-top:.8rem;">
+      <span class="tag">Travail individuel</span>
+      <span class="tag">Durée : 3h</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 1 – FORMES D'ÉNERGIE
+  ══════════════════════════════════ -->
+  <div class="section-titre">⚡ Activité 1 – Les différentes formes d'énergie</div>
+
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">1</div>
+      <div class="titre">Conversions d'énergie – Exemples de matériels</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        En s'inspirant des images du mini-site, donner des exemples de matériels
+        qui transforment une énergie en une autre :
+      </div>
+      <div class="tableau">
+        <table class="tl">
+          <thead>
+            <tr>
+              <th class="gauche">Conversion d'énergie</th>
+              <th>Exemple de matériel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="gauche">Thermique → Rayonnante</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Rayonnante → Thermique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Thermique → Électrique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Électrique → Thermique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Électrique → Rayonnante</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Rayonnante → Électrique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Rayonnante → Chimique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Chimique → Rayonnante</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Électrique → Chimique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Chimique → Électrique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Chimique → Thermique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Thermique → Chimique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Électrique → Mécanique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Mécanique → Électrique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Mécanique → Thermique</td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Thermique → Mécanique</td>
+                <td><input type="text"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <div class="tableau">
+            <table class="tl">
+              <thead>
+                <tr>
+                  <th class="gauche">Conversion</th>
+                  <th>Exemple</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="gauche">Thermique → Rayonnante</td><td>Poêle à bois, bougie, radiateur incandescent</td></tr>
+                <tr><td class="gauche">Rayonnante → Thermique</td><td>Peau humaine, bitume, capteur solaire thermique</td></tr>
+                <tr><td class="gauche">Thermique → Électrique</td><td>Centrale thermique, thermocouple</td></tr>
+                <tr><td class="gauche">Électrique → Thermique</td><td>Grille-pain, radiateur électrique, fer à repasser</td></tr>
+                <tr><td class="gauche">Électrique → Rayonnante</td><td>Ampoule LED, écran TV</td></tr>
+                <tr><td class="gauche">Rayonnante → Électrique</td><td>Panneau solaire photovoltaïque</td></tr>
+                <tr><td class="gauche">Rayonnante → Chimique</td><td>Plante (photosynthèse)</td></tr>
+                <tr><td class="gauche">Chimique → Rayonnante</td><td>Luciole, flamme</td></tr>
+                <tr><td class="gauche">Électrique → Chimique</td><td>Électrolyse, chargeur de batterie</td></tr>
+                <tr><td class="gauche">Chimique → Électrique</td><td>Pile, batterie, pile à combustible</td></tr>
+                <tr><td class="gauche">Chimique → Thermique</td><td>Combustion (bois, gaz, essence)</td></tr>
+                <tr><td class="gauche">Thermique → Chimique</td><td>Fermentation, distillation</td></tr>
+                <tr><td class="gauche">Électrique → Mécanique</td><td>Moteur électrique, ventilateur, pompe</td></tr>
+                <tr><td class="gauche">Mécanique → Électrique</td><td>Dynamo, alternateur, éolienne</td></tr>
+                <tr><td class="gauche">Mécanique → Thermique</td><td>Freinage, frottements</td></tr>
+                <tr><td class="gauche">Thermique → Mécanique</td><td>Machine à vapeur, moteur à combustion</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 2 – VOITURE
+  ══════════════════════════════════ -->
+  <div class="section-titre">🚗 Activité 2 – Énergies mises en jeu dans une voiture</div>
+
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">2</div>
+      <div class="titre">Chaîne d'énergie d'une voiture – Diagramme à compléter</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Compléter le diagramme des énergies mises en jeu lors du déplacement
+        d'une voiture, en indiquant le matériel permettant chaque conversion.
+      </div>
+      <figure>
+        <img src="../images/diagramme-chaine-energie-voiture.png"
+             alt="Diagramme chaîne d'énergie voiture à compléter">
+        <figcaption>Compléter les cases du diagramme.</figcaption>
+      </figure>
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>
+            <strong>Énergie chimique</strong> (réservoir essence/diesel)<br>
+            ↓ <em>Moteur à combustion interne</em><br>
+            <span class="br">Énergie thermique + Énergie mécanique</span> (arbre moteur)<br>
+            ↓ <em>Transmission (boîte de vitesses, différentiel)</em><br>
+            <span class="br">Énergie mécanique</span> (roues)<br>
+            + pertes : <span class="br">Énergie thermique</span> (échappement, frottements),
+            <span class="br">Énergie sonore</span> (bruit moteur/roulement).
+          </p>
+          <figure>
+            <img src="../images/correction-voiture-energie.png"
+                 alt="Chaîne d'énergie voiture corrigée">
+            <figcaption>Diagramme corrigé.</figcaption>
+          </figure>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 3 – UNITÉS
+  ══════════════════════════════════ -->
+  <div class="section-titre">🔢 Activité 3 – Les unités d'énergie</div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Unités et conversions</h2>
+    <div class="fml-bloc">
+      <div class="fml">1 Wh = 3 600 J &nbsp;·&nbsp; P = E / t</div>
+      <div class="fml-detail">
+        E : énergie en <strong>Joule (J)</strong> ou <strong>Watt-heure (Wh)</strong> ·
+        P : puissance en <strong>Watt (W)</strong> ·
+        t : durée en <strong>secondes (s)</strong> ou <strong>heures (h)</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr vert">
+      <div class="num">3</div>
+      <div class="titre">Exercices de calcul – Unités d'énergie</div>
+    </div>
+    <div class="exo-body">
+
+      <p><strong>Exercice 1 :</strong> Convertir 1 Wh en joules</p>
+      <input class="ligne" type="text" placeholder="1 Wh = … J">
+
+      <p><strong>Exercice 2 :</strong> Lampe 100 W allumée 2 h</p>
+      <textarea class="zone zone-sm"
+        placeholder="Énergie = P × t = 100 × 2 = … Wh = … kJ"></textarea>
+
+      <p><strong>Exercice 3 :</strong> Générateur fournissant 48 kWh/jour</p>
+      <textarea class="zone zone-sm"
+        placeholder="Puissance = E / t = 48 / 24 = … kW"></textarea>
+
+      <p><strong>Exercice 4 :</strong> 12 stères de bois (1 stère ≈ 1 000 kWh)</p>
+      <textarea class="zone zone-sm"
+        placeholder="Énergie = 12 × 1000 = … kWh  →  équivalent nucléaire économisé = … kWh"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Ex1 :</strong>
+          <span class="br">1 Wh = 1 W × 3 600 s = 3 600 J</span></p>
+          <p><strong>Ex2 :</strong>
+          E = 100 × 2 = <span class="br">200 Wh</span> ·
+          200 × 3 600 = <span class="br">720 000 J = 720 kJ</span></p>
+          <p><strong>Ex3 :</strong>
+          P = 48 / 24 = <span class="br">2 kW</span></p>
+          <p><strong>Ex4 :</strong>
+          12 × 1 000 = <span class="br">12 000 kWh</span> économisés en énergie nucléaire.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 4 – CENTRALES
+  ══════════════════════════════════ -->
+  <div class="section-titre">🏭 Activité 4 – Les centrales de production d'énergie</div>
+
+  <div class="notice-audio">
+    <span>🎧</span> Brancher les écouteurs avant de lancer les vidéos.
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr orange">
+      <div class="num">4</div>
+      <div class="titre">Centrales de production – Tableau des conversions</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Pour chaque vidéo, compléter le tableau avec l'énergie primaire,
+        les transformateurs d'énergie, et l'énergie secondaire produite.
+      </div>
+
+      <div class="video-grid">
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale hydraulique.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale hydraulique</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale thermique.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale thermique</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale solaire photovoltaïque.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale solaire photovoltaïque</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Chauffe-eau solaire.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Chauffe-eau solaire</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale nucléaire.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale nucléaire</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale éolienne.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale éolienne</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Raffinerie de pétrole.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Raffinerie de pétrole</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale géothermique.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale géothermique</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale marémotrice.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale marémotrice</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Pompe à chaleur.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Pompe à chaleur</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <video controls preload="metadata">
+              <source src="../videos/Centrale biomasse.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p>Centrale biomasse</p>
+        </div>
+      </div>
+
+      <div class="tableau">
+        <table class="tl">
+          <thead>
+            <tr>
+              <th class="gauche">Installation</th>
+              <th>Énergie primaire</th>
+              <th>Transformateurs d'énergie</th>
+              <th>Énergie secondaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="gauche">Centrale hydraulique</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale thermique</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale solaire PV</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Chauffe-eau solaire</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale nucléaire</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale éolienne</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Raffinerie de pétrole</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale géothermique</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale marémotrice</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Pompe à chaleur</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale biomasse</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <div class="tableau">
+            <table class="tl">
+              <thead>
+                <tr>
+                  <th class="gauche">Installation</th>
+                  <th>Énergie primaire</th>
+                  <th>Transformateurs</th>
+                  <th>Énergie secondaire</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="gauche">Centrale hydraulique</td>
+                    <td>Potentielle (barrage)</td>
+                    <td>Turbine + Alternateur</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Centrale thermique</td>
+                    <td>Chimique (fioul, charbon)</td>
+                    <td>Chaudière + Turbine vapeur + Alternateur</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Centrale solaire PV</td>
+                    <td>Rayonnante (soleil)</td>
+                    <td>Panneaux PV + Onduleur</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Chauffe-eau solaire</td>
+                    <td>Rayonnante (soleil)</td>
+                    <td>Capteur thermique + Échangeur</td>
+                    <td>Thermique (eau chaude)</td></tr>
+                <tr><td class="gauche">Centrale nucléaire</td>
+                    <td>Nucléaire (uranium)</td>
+                    <td>Réacteur + Turbine vapeur + Alternateur</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Centrale éolienne</td>
+                    <td>Cinétique (vent)</td>
+                    <td>Turbine + Génératrice</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Raffinerie de pétrole</td>
+                    <td>Chimique (pétrole brut)</td>
+                    <td>Distillation + Craquage</td>
+                    <td>Chimique (carburants)</td></tr>
+                <tr><td class="gauche">Centrale géothermique</td>
+                    <td>Thermique (chaleur terrestre)</td>
+                    <td>Échangeur + Turbine + Alternateur</td>
+                    <td>Électrique / Thermique</td></tr>
+                <tr><td class="gauche">Centrale marémotrice</td>
+                    <td>Cinétique (marées)</td>
+                    <td>Turbine + Alternateur</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Pompe à chaleur</td>
+                    <td>Thermique (air/sol extérieur)</td>
+                    <td>Compresseur + Échangeurs</td>
+                    <td>Thermique (chauffage)</td></tr>
+                <tr><td class="gauche">Centrale biomasse</td>
+                    <td>Chimique (bois, déchets)</td>
+                    <td>Chaudière + Turbine + Alternateur</td>
+                    <td>Électrique / Thermique</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 5 – EXTRACTION
+  ══════════════════════════════════ -->
+  <div class="section-titre">🌍 Activité 5 – Extraction de l'énergie</div>
+
+  <div class="exo">
+    <div class="exo-hdr violet">
+      <div class="num">5</div>
+      <div class="titre">Réserves mondiales – Principaux producteurs</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À partir du document sur les réserves mondiales d'énergies fossiles,
+        compléter le tableau des principaux producteurs.
+      </div>
+      <figure>
+        <img src="../images/reserves-mondiales-energie-fossile.png"
+             alt="Réserves mondiales d'énergie fossile">
+        <figcaption>Document – Réserves mondiales d'énergies fossiles</figcaption>
+      </figure>
+
+      <p><strong>Q1.</strong> Principaux producteurs :</p>
+      <div class="tableau">
+        <table class="tl">
+          <thead>
+            <tr>
+              <th class="gauche">Énergie</th>
+              <th>Plus gros producteurs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="gauche">Charbon</td>
+                <td><input type="text" placeholder="Pays…"></td></tr>
+            <tr><td class="gauche">Pétrole</td>
+                <td><input type="text" placeholder="Pays…"></td></tr>
+            <tr><td class="gauche">Gaz naturel</td>
+                <td><input type="text" placeholder="Pays…"></td></tr>
+            <tr><td class="gauche">Uranium</td>
+                <td><input type="text" placeholder="Pays…"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Q2.</strong> Plus faibles producteurs :</p>
+      <textarea class="zone zone-sm"
+        placeholder="Les pays les plus faibles producteurs sont …"></textarea>
+
+      <p><strong>Q3.</strong> Conclusion concernant l'Europe :</p>
+      <textarea class="zone"
+        placeholder="L'Europe est …"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1.</strong></p>
+          <ul>
+            <li>Charbon : <span class="br">Chine (50%), Inde, USA, Australie</span></li>
+            <li>Pétrole : <span class="br">USA, Arabie Saoudite, Russie, Iraq</span></li>
+            <li>Gaz naturel : <span class="br">USA, Russie, Iran, Qatar</span></li>
+            <li>Uranium : <span class="br">Kazakhstan, Canada, Australie, Namibie</span></li>
+          </ul>
+          <p><strong>Q2.</strong>
+          <span class="br">Europe de l'Ouest (France, Allemagne, Italie…), Japon.</span></p>
+          <p><strong>Q3.</strong> L'Europe est
+          <span class="br">fortement dépendante des importations</span>
+          (pétrole du Moyen-Orient, gaz de Russie, uranium du Kazakhstan).
+          Cela crée une vulnérabilité géopolitique et économique importante.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 6 – TRANSPORT
+  ══════════════════════════════════ -->
+  <div class="section-titre">🔌 Activité 6 – Transport de l'énergie</div>
+
+  <div class="exo">
+    <div class="exo-hdr teal">
+      <div class="num">6</div>
+      <div class="titre">Réseaux THT, gazoducs et oléoducs</div>
+    </div>
+    <div class="exo-body">
+      <figure>
+        <img src="../images/transport-energie.PNG"
+             alt="Réseaux THT, gazoducs et oléoducs en Europe">
+        <figcaption>Réseaux de transport d'énergie (THT électrique, gazoducs, oléoducs).</figcaption>
+      </figure>
+
+      <p><strong>Q1.</strong> Combien de lignes électriques THT alimentent la Sarthe ?</p>
+      <input class="ligne" type="text" placeholder="Nombre de lignes THT : …">
+
+      <p><strong>Q2.</strong> Quelles sont les villes points d'entrée du gaz en France ?</p>
+      <figure>
+        <img src="../images/points-entree-gaz-naturel.PNG"
+             alt="Points d'entrée du gaz naturel en France">
+        <figcaption>Points d'entrée du gaz naturel en France</figcaption>
+      </figure>
+      <input class="ligne" type="text" placeholder="Villes d'entrée du gaz : …">
+
+      <p><strong>Q3.</strong> Quel pays possède le plus grand réseau d'oléoducs ?</p>
+      <input class="ligne" type="text" placeholder="Pays : …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1.</strong> <span class="br">4 lignes THT</span> environ.</p>
+          <p><strong>Q2.</strong>
+          <span class="br">Dunkerque, Montoir-de-Bretagne, Fos-sur-Mer,
+          Taisnière, Ollingue, Obergailbach</span>.</p>
+          <p><strong>Q3.</strong> Les <span class="br">USA</span>
+          possèdent le plus grand réseau d'oléoducs.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 7 – CONSOMMATION
+  ══════════════════════════════════ -->
+  <div class="section-titre">📊 Activité 7 – Consommation des ressources</div>
+
+  <div class="exo">
+    <div class="exo-hdr vert">
+      <div class="num">7</div>
+      <div class="titre">Consommation en tep/habitant – Comparaison mondiale</div>
+    </div>
+    <div class="exo-body">
+      <div class="att">
+        <strong>Rappel :</strong> 1 tep = 7,33 barils · 1 baril = 159 L
+      </div>
+      <figure>
+        <img src="../images/consommations-ressources.png"
+             alt="Consommation tep/habitant 1960-2009">
+        <figcaption>Consommation en tep/habitant : Canada, France, Chine, Bangladesh (1960–2009).</figcaption>
+      </figure>
+
+      <p><strong>Q1.</strong> Pays les plus gros consommateurs :</p>
+      <input class="ligne" type="text" placeholder="Pays…">
+
+      <figure>
+        <img src="../images/comparaisons-consommation.png"
+             alt="Comparaisons consommation">
+        <figcaption>Consommation en tep/habitant de quelques pays (1960–2009).</figcaption>
+      </figure>
+
+      <p><strong>Q2.</strong> Comparaison Canada / France / Chine / Bangladesh :</p>
+      <textarea class="zone"
+        placeholder="Canada : … tep/h · France : … tep/h · Chine : … · Bangladesh : …"></textarea>
+
+      <p><strong>Q3.</strong> Calculer la consommation journalière en litres par habitant :</p>
+      <textarea class="zone"
+        placeholder="France (4,04 tep/hab/an) : 4,04 × 7,33 × 159 / 365 = … L/jour&#10;Canada (7,8 tep/hab/an) : … L/jour&#10;Bangladesh (0,155 tep/hab/an) : … L/jour"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1.</strong>
+          <span class="br">USA, Canada, Australie</span>, puis pays du Golfe.</p>
+          <p><strong>Q2.</strong> Canada très fort (~7,8 tep/h) · France modérée (~4 tep/h) ·
+          Chine en forte hausse depuis 2000 · Bangladesh très faible (~0,15 tep/h).</p>
+          <p><strong>Q3.</strong><br>
+          France : <span class="br">4,04 × 7,33 × 159 / 365 ≈ 12,9 L/jour</span><br>
+          Canada : <span class="br">≈ 24,9 L/jour</span><br>
+          Bangladesh : <span class="br">≈ 0,5 L/jour</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       ACTIVITÉ 8 – ÉNERGIES DE DEMAIN
+  ══════════════════════════════════ -->
+  <div class="section-titre">🚀 Activité 8 – Les énergies de demain</div>
+
+  <div class="notice-audio">
+    <span>🎧</span> Brancher les écouteurs avant de lancer les vidéos.
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr cyan">
+      <div class="num">8</div>
+      <div class="titre">Nouvelles technologies énergétiques – Tableau des conversions</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Pour chaque vidéo, compléter le tableau avec l'énergie primaire,
+        les transformateurs d'énergie, et l'énergie secondaire produite.
+      </div>
+
+      <div class="video-grid">
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/QibwvoTvDFo"
+                    title="Hydrolienne" allowfullscreen></iframe>
+          </div>
+          <p>Hydrolienne</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/AFZZoMc8PjU"
+                    title="Pile à combustible" allowfullscreen></iframe>
+          </div>
+          <p>Pile à combustible</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/YZSU217hxLo"
+                    title="Biocarburant" allowfullscreen></iframe>
+          </div>
+          <p>Biocarburant</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/JEnLC4cVEgI"
+                    title="Centrale ITER" allowfullscreen></iframe>
+          </div>
+          <p>Centrale ITER (fusion)</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VOZwU6r2KD8"
+                    title="Centrale solaire spatiale" allowfullscreen></iframe>
+          </div>
+          <p>Centrale solaire spatiale</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/AN17__IyJQs"
+                    title="Éolienne altitude" allowfullscreen></iframe>
+          </div>
+          <p>Éolienne d'altitude</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/FsFHOEzOOFI"
+                    title="Centrale Pelamis" allowfullscreen></iframe>
+          </div>
+          <p>Centrale Pelamis (houle)</p>
+        </div>
+        <div class="video-item">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/O2sh7Bm6wNU"
+                    title="Centrale thermique des mers" allowfullscreen></iframe>
+          </div>
+          <p>Centrale thermique des mers</p>
+        </div>
+      </div>
+
+      <div class="tableau">
+        <table class="tl">
+          <thead>
+            <tr>
+              <th class="gauche">Installation</th>
+              <th>Énergie primaire</th>
+              <th>Transformateurs d'énergie</th>
+              <th>Énergie secondaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="gauche">Hydrolienne</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Pile à combustible</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Biocarburant</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale ITER</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale solaire spatiale</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Éolienne d'altitude</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale Pelamis</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+            <tr><td class="gauche">Centrale thermique des mers</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <div class="tableau">
+            <table class="tl">
+              <thead>
+                <tr>
+                  <th class="gauche">Installation</th>
+                  <th>Énergie primaire</th>
+                  <th>Transformateurs</th>
+                  <th>Énergie secondaire</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="gauche">Hydrolienne</td>
+                    <td>Cinétique (courants marins)</td>
+                    <td>Turbine sous-marine + Génératrice</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Pile à combustible</td>
+                    <td>Chimique (H₂)</td>
+                    <td>Réaction H₂ + O₂</td>
+                    <td>Électrique + Thermique</td></tr>
+                <tr><td class="gauche">Biocarburant</td>
+                    <td>Chimique (végétaux)</td>
+                    <td>Fermentation / Estérification</td>
+                    <td>Chimique (carburant)</td></tr>
+                <tr><td class="gauche">Centrale ITER</td>
+                    <td>Nucléaire (fusion D-T)</td>
+                    <td>Réacteur fusion + Turbine + Alternateur</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Centrale solaire spatiale</td>
+                    <td>Rayonnante (soleil)</td>
+                    <td>Panneaux PV + Micro-ondes + Antenne sol</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Éolienne d'altitude</td>
+                    <td>Cinétique (vent altitude)</td>
+                    <td>Cerf-volant générateur</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Centrale Pelamis</td>
+                    <td>Cinétique (houle)</td>
+                    <td>Serpent articulé + Vérins + Génératrice</td>
+                    <td>Électrique</td></tr>
+                <tr><td class="gauche">Centrale thermique des mers</td>
+                    <td>Thermique (gradient mer)</td>
+                    <td>Échangeur chaud/froid + Turbine</td>
+                    <td>Électrique</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ── À RETENIR ── -->
+  <section style="background:var(--blanc);border:2px solid var(--bleu);
+    border-left:6px solid var(--bleu);border-radius:8px;
+    padding:1.4rem 1.8rem;margin-bottom:2rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.07);">
+    <h2 style="color:var(--bleu);font-size:1.1rem;
+               font-weight:800;margin-bottom:.9rem;">
+      📌 À retenir – Essentiel
+    </h2>
+    <div class="grid2">
+      <div>
+        <p style="font-weight:700;color:var(--bleu);margin-bottom:.3rem;">
+          ⚡ Formes d'énergie
+        </p>
+        <ul style="font-size:.88rem;margin-left:1.1rem;">
+          <li>Thermique, rayonnante, chimique</li>
+          <li>Électrique, mécanique, nucléaire</li>
+          <li>Un <strong>convertisseur</strong> transforme l'une en l'autre</li>
+        </ul>
+        <p style="font-weight:700;color:var(--vert);margin:.6rem 0 .3rem;">
+          🌱 Renouvelables vs fossiles
+        </p>
+        <ul style="font-size:.88rem;margin-left:1.1rem;">
+          <li>Renouvelables : solaire, éolien, hydraulique…</li>
+          <li>Fossiles : pétrole, gaz, charbon (émetteurs CO₂)</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700;color:var(--orange);margin-bottom:.3rem;">
+          🔢 Formules clés
+        </p>
+        <div style="font-family:'Courier New';font-size:.9rem;
+             background:#f3f4f6;border-radius:4px;
+             padding:.6rem .9rem;line-height:1.9;">
+          1 Wh = 3 600 J<br>
+          P = E / t (W)<br>
+          E = P × t (Wh)
+        </div>
+        <p style="font-weight:700;color:var(--rouge);margin:.6rem 0 .3rem;">
+          🌍 Europe
+        </p>
+        <p style="font-size:.88rem;">
+          Très peu productrice d'énergies fossiles →
+          <strong>fortement dépendante</strong> des importations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVIGATION BAS ── -->
+  <nav class="nav-bas">
+    <a class="nav-btn disabled">← Précédent</a>
+    <div class="centre">Module 1 · Activité 1 / 6 · Les énergies</div>
+    <a href="activite-photovoltaique.html" class="nav-btn">
+      Suivant →<span>2. Photovoltaïque</span>
+    </a>
+  </nav>
+
+</div><!-- /page -->
+
+<footer>
+  <p>Séquence F – STI2D · Lycée ·
+  <a href="../index.html">Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>

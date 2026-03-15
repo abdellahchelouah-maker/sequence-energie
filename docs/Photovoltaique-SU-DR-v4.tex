@@ -1,0 +1,485 @@
+%% Photovoltaïque – Sujet + Document réponse
+%% Séquence F – Module 1, Activité 2
+%% Version 2026 – Alignée avec le site web
+
+\documentclass[a4paper, 11pt, oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+
+%% Couleurs charte
+\definecolor{teal}{RGB}{0,150,136}
+\definecolor{cyancol}{RGB}{0,188,212}
+\definecolor{vertcol}{RGB}{76,175,80}
+\definecolor{orangecol}{RGB}{255,152,0}
+\definecolor{bleucol}{RGB}{33,150,243}
+\definecolor{grisclair}{RGB}{245,245,245}
+
+%% Mise en place du style
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\textbf{Photovoltaïque -- Sujet + Document réponse}}
+\rfoot{Page \thepage{} / \pageref{LastPage}}
+\lfoot{Séquence F \textperiodcentered{} 2nde/1re STI2D}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+%% Styles personnalisés
+\newcommand{\question}[1]{\textcolor{bleucol}{\textbf{#1}}}
+
+\begin{document}
+
+%% ====== PAGE DE TITRE ======
+\begin{center}
+{\huge \textcolor{teal}{\textbf{Activité 2 -- Photovoltaïque}}}\\[0.4cm]
+{\large \textbf{Séquence F : Systèmes mécatroniques}}\\[0.2cm]
+{\normalsize Comportement d'un panneau solaire}\\[0.2cm]
+{\small Année scolaire 2025-2026}
+\end{center}
+
+\vspace{0.8cm}
+
+\begin{tcolorbox}[colback=cyancol!10, colframe=cyancol]
+\textbf{Travail} : binôme \quad \textbf{Durée} : 3h \quad \textbf{Module} : 1\\[4pt]
+\textbf{Objectif} : Étudier le comportement d'un panneau photovoltaïque et dimensionner une installation autonome.
+\end{tcolorbox}
+
+\vspace{0.6cm}
+
+%% ====== COMPÉTENCES ======
+\textcolor{teal}{\textbf{\large Compétences visées}}
+
+\vspace{0.3cm}
+\begin{minipage}{0.48\textwidth}
+\textbf{CO3.1} --- Comprendre le comportement électrique d'un panneau photovoltaïque (courbes I = f(U) et P = f(U)).
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\textbf{CO3.3} --- Dimensionner une petite installation photovoltaïque autonome (panneaux, batteries, régulateur, onduleur).
+\end{minipage}
+
+\vspace{0.8cm}
+
+%% ====== RESSOURCES ======
+\textcolor{teal}{\textbf{\large Ressources et matériel}}
+
+\vspace{0.2cm}
+\textbf{Équipement (parties 1 \& 2)} :
+\begin{itemize}
+  \item Panneau(x) photovoltaïque(s) avec plaque signalétique
+  \item Solarimètre (mesure d'irradiance en W/m\textsuperscript{2})
+  \item Ampèremètre (A) et voltmètre (V) -- Rhéostat (résistance variable)
+  \item Ordinateur + navigateur web + PVGIS
+\end{itemize}
+
+\textbf{Ressources numériques} :
+\begin{itemize}
+  \item Vidéo d'introduction au photovoltaïque
+  \item Animation : panneau 50 Wc (caractéristiques I/V, P/V)
+  \item Animation : chalet isolé (dimensionnement complet)
+  \item Simulateur PVGIS : \url{https://re.jrc.ec.europa.eu/pvg_tools/fr/}
+\end{itemize}
+
+\vspace{0.6cm}
+
+%% ====== CONTEXTE ======
+\textcolor{teal}{\textbf{\large Contexte et problématique}}
+
+\vspace{0.2cm}
+Le lycée souhaite équiper le toit du nouveau \textbf{garage à vélos et trottinettes électriques} d'une installation photovoltaïque autonome pour :
+\begin{itemize}
+  \item recharger les vélos et trottinettes électriques ;
+  \item alimenter l'éclairage du local ;
+  \item fonctionner de manière indépendante du réseau électrique.
+\end{itemize}
+
+\newpage
+
+%% ====== PARTIE 1 ======
+\section{\textcolor{teal}{Partie 1 -- Découverte du photovoltaïque}}
+
+\subsection*{Vidéo d'introduction}
+
+\question{1. Compréhension générale}
+
+\vspace{0.2cm}
+Après avoir visionné la vidéo d'introduction, répondre aux questions :
+
+\vspace{0.4cm}
+\textbf{1.1} --- Identifier les formes d'énergie mises en jeu dans un panneau photovoltaïque.
+
+\vspace{0.3cm}
+\fcolorbox{teal}{grisclair}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{
+Énergie \underline{\hspace{3cm}} $\rightarrow$ Énergie \underline{\hspace{3cm}}
+}}
+
+\vspace{0.6cm}
+\textbf{1.2} --- Expliquer pourquoi l'énergie solaire est qualifiée d'énergie renouvelable.
+
+\vspace{1.5cm}
+
+\textbf{1.3} --- Dans la Séquence F, identifier les systèmes dont la chaîne d'énergie est comparable à celle du panneau PV.
+
+\vspace{1.5cm}
+
+\newpage
+
+%% ====== PARTIE 2 ======
+\section{\textcolor{teal}{Partie 2 -- Étude expérimentale d'un module photovoltaïque}}
+
+\textbf{Objectif} : tracer les caractéristiques $I = f(U)$ et $P = f(U)$ du panneau en conditions réelles.
+
+\vspace{0.6cm}
+
+\question{2.1 -- Câblage et mesure d'irradiance}
+
+\begin{enumerate}
+  \item Câbler le montage (rhéostat, ampèremètre, voltmètre) et le faire vérifier par le professeur.
+  \item Mesurer l'irradiance au niveau du panneau avec le solarimètre.
+\end{enumerate}
+
+\fcolorbox{teal}{grisclair}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{
+Irradiance mesurée : \quad \underline{\hspace{8cm}} W/m\textsuperscript{2}
+}}
+
+\vspace{0.8cm}
+
+\question{2.2 -- Tracé de la caractéristique $I = f(U)$}
+
+Faire varier le rhéostat de $R_{\max}$ à $R_{\min}$ (15 positions). Relever U et I pour chaque position.
+
+\vspace{0.3cm}
+
+{\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\# & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+\hline
+$U$ (V) & & & & & & & & & & & & & & & \\[8pt]
+\hline
+$I$ (A) & & & & & & & & & & & & & & & \\[8pt]
+\hline
+\end{tabular}
+}
+
+\vspace{0.6cm}
+Saisir les données dans le tableau interactif du site -- les courbes $I(U)$ et $P(U)$ se tracent automatiquement.
+
+\vspace{0.8cm}
+
+\question{2.3 -- Analyse du point de fonctionnement optimal (MPP)}
+
+\begin{tcolorbox}[colback=cyancol!10, colframe=cyancol]
+\textbf{Q1.} Relever $U_{\text{MPP}}$ et $I_{\text{MPP}}$ :
+\vspace{0.3cm}
+
+$U_{\text{MPP}} = \quad \underline{\hspace{3cm}}$ V \qquad $I_{\text{MPP}} = \quad \underline{\hspace{3cm}}$ A
+
+\vspace{0.4cm}
+\textbf{Q2.} Calculer $P_{\max} = U_{\text{MPP}} \times I_{\text{MPP}}$ :
+\vspace{0.3cm}
+
+$P_{\max} = \quad \underline{\hspace{3cm}}$ W
+
+\vspace{0.4cm}
+\textbf{Q3.} Comparer $P_{\max}$ à la puissance crête indiquée sur la plaque signalétique :
+
+\vspace{1.2cm}
+\end{tcolorbox}
+
+\vspace{0.6cm}
+
+\question{2.4 -- Influence de l'irradiance}
+
+Recommencer quelques mesures en changeant l'irradiance (masque partiel, projecteur...).
+
+\vspace{0.3cm}
+Observation : quand l'irradiance augmente, $I_{\text{sc}}$ et $P_{\max}$ \underline{\hspace{4cm}}.
+
+Justification :
+
+\vspace{1.2cm}
+
+\newpage
+
+%% ====== PARTIE 3 ======
+\section{\textcolor{teal}{Partie 3 -- Animation : panneau 50 Wc sous différentes conditions}}
+
+\textbf{Objectif} : explorer le comportement modélisé d'un panneau 50 Wc en faisant varier G et T.
+
+\vspace{0.6cm}
+
+\subsection*{3.1 -- Conditions NTP ($G = 1000$ W/m\textsuperscript{2}, $T = 25$°C)}
+
+\begin{tcolorbox}[colback=teal!10, colframe=teal]
+Régler $G = 1000$ W/m\textsuperscript{2} et $T = 25$°C. Relever les grandeurs au point MPP :
+
+\vspace{0.4cm}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Grandeur} & \textbf{Valeur} & \textbf{Unité} \\
+\hline
+$U_{\text{MPP}}$ & \underline{\hspace{3cm}} & V \\[8pt]
+\hline
+$I_{\text{MPP}}$ & \underline{\hspace{3cm}} & A \\[8pt]
+\hline
+$P_{\max}$ & \underline{\hspace{3cm}} & W \\[8pt]
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{0.8cm}
+
+\subsection*{3.2 -- Influence de l'irradiance G}
+
+\begin{tcolorbox}[colback=teal!10, colframe=teal]
+Faire varier $G$ : 1000 $\rightarrow$ 600 $\rightarrow$ 200 W/m\textsuperscript{2} :
+
+\vspace{0.4cm}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Grandeur} & $G = 1000$ W/m\textsuperscript{2} & $G = 600$ W/m\textsuperscript{2} & $G = 200$ W/m\textsuperscript{2} \\
+\hline
+$I_{\text{sc}}$ (A) & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\[8pt]
+\hline
+$U_{\text{oc}}$ (V) & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\[8pt]
+\hline
+$P_{\max}$ (W) & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\[8pt]
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{0.6cm}
+
+Quand l'irradiance diminue, quelles grandeurs varient et comment ?
+
+\vspace{1cm}
+
+Vérifier la proportionnalité $I_{\text{sc}} \propto G$ :
+
+\[
+\frac{I_{\text{sc}}(1000)}{I_{\text{sc}}(200)} = \frac{\underline{\hspace{1.5cm}}}{\underline{\hspace{1.5cm}}} = \underline{\hspace{1.5cm}} \quad \Rightarrow \quad \text{Ratio attendu : 5}
+\]
+
+\vspace{0.8cm}
+
+\subsection*{3.3 -- Influence de la température}
+
+\begin{tcolorbox}[colback=teal!10, colframe=teal]
+À irradiance constante (1000 W/m\textsuperscript{2}), faire varier $T$ : $-10$°C $\rightarrow$ 25°C $\rightarrow$ 75°C :
+
+\vspace{0.4cm}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Grandeur} & $T = -10$°C & $T = 25$°C & $T = 75$°C \\
+\hline
+$U_{\text{oc}}$ (V) & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\[8pt]
+\hline
+$P_{\max}$ (W) & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\[8pt]
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{0.6cm}
+
+Comment évoluent $U_{\text{oc}}$ et $P_{\max}$ quand la température augmente ?
+
+\vspace{1.2cm}
+
+Quelles sont les meilleures conditions de fonctionnement d'un panneau PV ?
+
+\vspace{1.2cm}
+
+\newpage
+
+%% ====== PARTIE 4 ======
+\section{\textcolor{teal}{Partie 4 -- Dimensionnement de l'installation autonome}}
+
+\subsection*{4.a -- Énergie journalière $E_j$}
+
+\begin{tcolorbox}[colback=orangecol!10, colframe=orangecol]
+\textbf{Formule :} $E_j = P \times t$ \quad (en Wh/j)
+
+\vspace{0.3cm}
+\textbf{Données :}
+\begin{itemize}
+  \item Recharge vélos + trottinettes : 1 kWh/j
+  \item Éclairage : 8 lampes LED de 10 W, fonctionnant 4 h/j
+\end{itemize}
+
+\vspace{0.4cm}
+$E_{\text{éclairage}} = 8 \times 10 \times 4 = \underline{\hspace{3cm}}$ Wh/j
+
+$E_{\text{trottinettes}} = \underline{\hspace{3cm}}$ Wh/j
+
+$E_j = \underline{\hspace{2cm}} + \underline{\hspace{2cm}} = \underline{\hspace{3cm}}$ Wh/j $= \underline{\hspace{2cm}}$ kWh/j
+\end{tcolorbox}
+
+\vspace{0.8cm}
+
+\subsection*{4.b -- Puissance crête $P_c$}
+
+\begin{tcolorbox}[colback=orangecol!10, colframe=orangecol]
+\textbf{Formule :}
+\[
+P_c \text{ (kWc)} = \frac{E_j}{0{,}6 \times E_i}
+\]
+$E_i$ = gisement solaire moyen du site (kWh/m\textsuperscript{2}/j) \quad -- \quad 0,6 = coefficient de pertes
+
+\vspace{0.4cm}
+\textbf{Étape 1 :} Déterminer $E_i$ pour la région du lycée (carte fournie) :
+
+$E_i \approx \underline{\hspace{3cm}}$ kWh/m\textsuperscript{2}/j \quad (région : \underline{\hspace{3cm}})
+
+\vspace{0.4cm}
+\textbf{Étape 2 :} Calculer $P_c$ :
+
+$P_c = \dfrac{\underline{\hspace{2cm}}}{0{,}6 \times \underline{\hspace{2cm}}} = \underline{\hspace{3cm}}$ kWc $= \underline{\hspace{3cm}}$ Wc
+
+\vspace{0.4cm}
+\textbf{Étape 3 :} Nombre de panneaux (275 Wc l'unité) :
+
+Nombre $= \dfrac{\underline{\hspace{2cm}}}{275} = \underline{\hspace{2cm}}$ panneaux
+\end{tcolorbox}
+
+\vspace{0.8cm}
+
+\subsection*{4.c -- Capacité des batteries $C$}
+
+\begin{tcolorbox}[colback=orangecol!10, colframe=orangecol]
+\textbf{Formule :}
+\[
+C \text{ (Ah)} = \frac{N_j \times E_j}{D_p \times V}
+\]
+
+\begin{tabular}{ll}
+$N_j = 2$ jours & $D_p = 0{,}8$ (batteries solaires) \\
+$V = 24$ V & $E_j$ = valeur calculée en 4.a
+\end{tabular}
+
+\vspace{0.4cm}
+$C = \dfrac{2 \times \underline{\hspace{2cm}}}{0{,}8 \times 24} = \underline{\hspace{3cm}}$ Ah
+
+Capacité recommandée : au moins \underline{\hspace{2.5cm}} Ah sous 24 V
+\end{tcolorbox}
+
+\vspace{0.8cm}
+
+\subsection*{4 bis -- Régulateur de charge et onduleur}
+
+\begin{tcolorbox}[colback=cyancol!10, colframe=cyancol]
+\textbf{Q1.} Quel est le rôle du \textbf{régulateur de charge} ?
+
+\vspace{1.2cm}
+
+\textbf{Q2.} Quel est le rôle de l'\textbf{onduleur} ?
+
+\vspace{1.2cm}
+
+\textbf{Q3.} Pourquoi ces deux composants sont-ils essentiels ?
+
+\vspace{1.2cm}
+\end{tcolorbox}
+
+\newpage
+
+%% ====== PARTIE 5 ======
+\section{\textcolor{teal}{Partie 5 -- Vérification via PVGIS}}
+
+À l'aide du simulateur \href{https://re.jrc.ec.europa.eu/pvg_tools/fr/}{PVGIS (Commission Européenne)} :
+\begin{enumerate}
+  \item Localiser le lycée sur la carte.
+  \item Saisir la puissance crête $P_c$ calculée.
+  \item Relever la production annuelle (kWh/an) et mensuelle.
+  \item Identifier le mois le moins productif.
+\end{enumerate}
+
+\vspace{0.6cm}
+
+\begin{tcolorbox}[colback=vertcol!10, colframe=vertcol]
+\textbf{Résultats PVGIS :}
+
+\vspace{0.4cm}
+Production annuelle estimée : \underline{\hspace{5cm}} kWh/an
+
+\vspace{0.3cm}
+Mois le moins productif : \underline{\hspace{2.5cm}} \quad Production : \underline{\hspace{2cm}} kWh
+
+\vspace{0.3cm}
+Besoin mensuel : $E_j \times 30 = \underline{\hspace{3cm}}$ kWh
+
+\vspace{0.3cm}
+\textbf{Conclusion :} En hiver, l'installation \ldots
+
+\vspace{1.5cm}
+\end{tcolorbox}
+
+\newpage
+
+%% ====== PARTIE 6 ======
+\section{\textcolor{teal}{Partie 6 -- Synthèse et comparaison des chaînes d'énergie}}
+
+Comparer la chaîne d'énergie du local PV avec deux autres systèmes de la Séquence F :
+
+\vspace{0.6cm}
+
+\begin{tcolorbox}[colback=grisclair, colframe=bleucol, title=\textcolor{bleucol}{\textbf{Tableau comparatif}}]
+\small
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|p{2.2cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{2.5cm}|}
+\hline
+\textbf{Système} & \textbf{Source} & \textbf{Conversion} & \textbf{Stockage} & \textbf{Sortie} \\
+\hline
+\textbf{Local PV} & Lumière solaire & Lumière $\rightarrow$ Élec & Batteries & Recharge / Éclairage \\
+\hline
+\textbf{MAS} & \underline{\hspace{1.8cm}} & \underline{\hspace{1.8cm}} & \underline{\hspace{1.8cm}} & Rotation moteur \\[10pt]
+\hline
+\textbf{VAE} & \underline{\hspace{1.8cm}} & \underline{\hspace{1.8cm}} & \underline{\hspace{1.8cm}} & Aide pédalage \\[10pt]
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\vspace{1cm}
+
+%% ====== À RETENIR ======
+\begin{tcolorbox}[colback=cyancol!10, colframe=teal, title=\textcolor{teal}{\textbf{À retenir -- Formules clés}}]
+
+\textbf{Comportement d'un panneau PV :}
+\begin{itemize}
+  \item $I_{sc}$ proportionnel à G \quad \textbullet \quad $U_{oc}$ peu sensible à G, diminue si T$\uparrow$
+  \item $P_{\max}$ diminue quand G$\downarrow$ ou T$\uparrow$
+\end{itemize}
+
+\vspace{0.4cm}
+\textbf{Formules de dimensionnement :}
+\begin{center}
+$E_j = P \times t$ \qquad
+$P_c = \dfrac{E_j}{0{,}6 \times E_i}$ \qquad
+$C = \dfrac{N_j \times E_j}{D_p \times V}$
+\end{center}
+
+\vspace{0.4cm}
+\textbf{Composants :}
+\begin{itemize}
+  \item \textbf{Régulateur MPPT} : protège les batteries, optimise le point de fonctionnement
+  \item \textbf{Onduleur} : convertit DC $\rightarrow$ AC 230 V / 50 Hz
+\end{itemize}
+\end{tcolorbox}
+
+\vfill
+
+\begin{center}
+\textit{Fin du document -- Séquence F, Activité 2 -- Photovoltaïque}
+\end{center}
+
+\end{document}

@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activité 2 – Photovoltaïque · Séquence F</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="inner">
+    <div class="badge">Module 1 · Activité 2 / 6</div>
+    <h1>☀️ Le solaire photovoltaïque</h1>
+    <p class="meta">Séquence F · 2nde / 1re STI2D ·
+      ⏱ 3h · Travail en binôme</p>
+  </div>
+</header>
+
+<!-- ── BARRE NAVIGATION ACTIVITÉS ── -->
+<nav class="nav-activites">
+  <div class="nav-activites-inner">
+    <a href="../index.html" class="nav-home-btn">⌂ Séquence F</a>
+    <span class="nav-sep">›</span>
+    <span class="nav-module-label">Module 1</span>
+    <span class="nav-sep">›</span>
+    <div class="nav-acts">
+      <a href="activite-energies.html"
+         class="nav-act">1 · Énergies</a>
+      <a href="activite-photovoltaique.html"
+         class="nav-act mod-teal active">2 · Photovoltaïque</a>
+      <a href="activite-chaine-energie-MAS.html"
+         class="nav-act mod-violet">3 · MAS</a>
+      <a href="activite-pneumatique.html"
+         class="nav-act mod-orange">4 · Pneumatique</a>
+      <a href="activite-vae-voiture.html"
+         class="nav-act mod-vert">5 · VAE</a>
+      <a href="activite-voiture-demain.html"
+         class="nav-act mod-cyan">6 · Voiture demain</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ── OBJECTIFS ── -->
+  <div class="bloc">
+    <h2>🎯 Compétences et objectifs</h2>
+    <div class="grid2">
+      <div class="cours" style="margin:0;">
+        <h3>CO3.1</h3>
+        Comprendre le comportement électrique d'un panneau photovoltaïque
+        (courbes I = f(U) et P = f(U))
+      </div>
+      <div class="cours" style="margin:0;
+           background:var(--vert-pale); border-color:var(--vert);">
+        <h3 style="color:var(--vert);">CO3.3</h3>
+        Dimensionner une installation photovoltaïque autonome
+        (panneaux, batteries, régulateur, onduleur)
+      </div>
+    </div>
+    <p style="margin-top:.8rem;">
+      <strong>Situation :</strong> alimenter en énergie électrique un
+      <strong>local vélos + trottinettes</strong> du lycée grâce à des
+      panneaux photovoltaïques.
+    </p>
+    <ul>
+      <li>Mettre en relation l'irradiance et la température avec la puissance délivrée.</li>
+      <li>Dimensionner une petite installation photovoltaïque autonome.</li>
+      <li>Utiliser PVGIS pour estimer la production annuelle réelle.</li>
+    </ul>
+    <div style="margin-top:.8rem;">
+      <span class="tag">Travail en binôme</span>
+      <span class="tag">Durée : 3h</span>
+      <span class="tag">2de / 1re STI2D</span>
+    </div>
+  </div>
+
+  <!-- ── RESSOURCES ── -->
+  <div class="bloc bloc-ressources">
+    <h2>📥 Ressources – Documents de travail</h2>
+    <p class="bloc-intro">Télécharger les documents nécessaires :</p>
+    <ul class="liste-telechargements">
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">Photovoltaïque – Sujet + Document réponse</span>
+        <div class="doc-liens">
+          <a href="../docs/Photovoltaique SU DR.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+          <a href="../docs/Photovoltaique SU DR.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">Photovoltaïque – Sujet seul</span>
+        <div class="doc-liens">
+          <a href="../docs/Photovoltaique SU.xls" download
+             class="btn-dl btn-excel">↗ Excel</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 1 – VIDÉO DÉCOUVERTE
+  ══════════════════════════════════ -->
+  <div class="section-titre">🎬 Partie 1 – Découverte du photovoltaïque</div>
+
+  <div class="notice-audio">
+    <span>🎧</span> Brancher les écouteurs avant de lancer les vidéos.
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-teal" style="background:linear-gradient(90deg,var(--teal),#26a69a);">
+      <div class="num">1</div>
+      <div class="titre">Vidéo d'introduction – Questions de compréhension</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Visionner la vidéo puis répondre aux questions ci-dessous.
+      </div>
+
+      <div style="position:relative; width:100%; max-width:900px;
+                  margin:1rem auto; aspect-ratio:16/9;
+                  border-radius:12px; overflow:hidden;
+                  box-shadow:0 8px 32px rgba(0,0,0,0.15);">
+        <video controls preload="metadata" poster="../images/poster_pv.jpg"
+               style="position:absolute;top:0;left:0;
+                      width:100%;height:100%;
+                      object-fit:contain;background:#000;">
+          <source src="../videos/decouvrir-photovoltaique.mp4" type="video/mp4">
+          <p>Navigateur incompatible.
+             <a href="../videos/decouvrir-photovoltaique.mp4">Télécharger la vidéo</a>.
+          </p>
+        </video>
+      </div>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/schema_cellule_pv.png"
+             alt="Schéma simplifié d'une cellule photovoltaïque"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Schéma simplifié d'une cellule photovoltaïque
+          (énergie lumineuse → énergie électrique).</figcaption>
+      </figure>
+
+      <p><strong>Q1.</strong> Identifier les formes d'énergie mises en jeu
+        dans un panneau photovoltaïque.</p>
+      <input class="ligne" type="text"
+             placeholder="Énergie … → Énergie …">
+
+      <p><strong>Q2.</strong> Expliquer pourquoi l'énergie solaire est qualifiée
+        d'énergie renouvelable.</p>
+      <textarea class="zone zone-sm"
+                placeholder="L'énergie solaire est renouvelable car …"></textarea>
+
+      <p><strong>Q3.</strong> Dans la Séquence F, identifier les systèmes dont
+        la chaîne d'énergie est comparable à celle du panneau PV.</p>
+      <input class="ligne" type="text"
+             placeholder="Systèmes comparables : …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1.</strong>
+            Conversion de l'<span class="br">énergie lumineuse (photons)</span>
+            en <span class="br">énergie électrique</span> (électrons dans le semi-conducteur),
+            parfois ensuite en énergie mécanique.
+          </p>
+          <p><strong>Q2.</strong>
+            Le Soleil est une source
+            <span class="br">inépuisable à l'échelle humaine</span> ;
+            son rayonnement se renouvelle naturellement.
+          </p>
+          <p><strong>Q3.</strong>
+            Même logique de chaîne que le
+            <span class="br">VAE ou la voiture électrique</span> :
+            source → conversion PV → distribution → actionneur.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 2 – EXPÉRIMENTATION
+  ══════════════════════════════════ -->
+  <div class="section-titre">🔬 Partie 2 – Étude expérimentale d'un module PV</div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Montage expérimental</h2>
+    <div class="cours">
+      <h3>⚙️ Principe</h3>
+      <p>Tracer les caractéristiques I = f(U) et P = f(U) d'un panneau solaire
+        polycristallin et repérer son point de fonctionnement optimal (MPP).</p>
+    </div>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/montage-experimental.PNG"
+           alt="Montage expérimental panneau PV + rhéostat"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Montage : panneau PV, rhéostat, ampèremètre,
+        voltmètre, solarimètre.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 2.1 Câblage -->
+  <div class="exo">
+    <div class="exo-hdr mod-teal"
+         style="background:linear-gradient(90deg,var(--teal),#26a69a);">
+      <div class="num">2.1</div>
+      <div class="titre">Câblage et mesure</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Matériel : panneau PV, rhéostat, ampèremètre, voltmètre, solarimètre,
+        projecteur (si besoin).
+      </div>
+      <ol>
+        <li>Câbler le montage et le faire vérifier par le professeur.</li>
+        <li>Mesurer l'irradiance au niveau du panneau (solarimètre, en W/m²).</li>
+        <li>Faire varier le rhéostat de R<sub>max</sub> à R<sub>min</sub>
+            (≈ 15 positions) et relever U et I pour chaque position.</li>
+        <li>Saisir les valeurs dans le tableau interactif ci-dessous pour tracer
+            automatiquement I = f(U) et P = f(U).</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- 2.2 Traceur interactif -->
+  <div class="exo">
+    <div class="exo-hdr mod-teal"
+         style="background:linear-gradient(90deg,var(--teal),#26a69a);">
+      <div class="num">2.2</div>
+      <div class="titre">Saisie des mesures – Tracé automatique des caractéristiques</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Saisir les mesures U et I dans le tableau. Les courbes I(V) et P(V)
+        se mettent à jour automatiquement.
+      </div>
+
+      <div class="traceur-pv">
+        <table class="tl data-table">
+          <thead>
+            <tr><th>#</th><th>U (V)</th><th>I (A)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>2</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>3</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>4</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>5</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>6</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>7</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>8</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>9</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>10</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>11</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>12</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>13</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>14</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+            <tr><td>15</td>
+                <td><input type="number" step="0.1" min="0" class="u-val"></td>
+                <td><input type="number" step="0.01" min="0" class="i-val"></td></tr>
+          </tbody>
+        </table>
+
+        <div class="charts-container">
+          <div>
+            <h4>Caractéristique I(V)</h4>
+            <canvas id="ivChart" width="500" height="250"></canvas>
+          </div>
+          <div>
+            <h4>Caractéristique P(V)</h4>
+            <canvas id="pvChart" width="500" height="250"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="tip" style="margin-top:.8rem;">
+        Les courbes se mettent à jour dès la modification d'une valeur.
+        Les lignes vides sont automatiquement ignorées.
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.3 Analyse -->
+  <div class="exo">
+    <div class="exo-hdr mod-teal"
+         style="background:linear-gradient(90deg,var(--teal),#26a69a);">
+      <div class="num">2.3</div>
+      <div class="titre">Analyse des courbes – Point de puissance maximale (MPP)</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À partir des courbes I(U) et P(U) tracées :
+      </div>
+      <p><strong>Q1.</strong> Repérer le point de fonctionnement optimal (P<sub>max</sub>)
+        et noter U<sub>MPP</sub> et I<sub>MPP</sub> :</p>
+      <div class="grid2">
+        <div>
+          <p>U<sub>MPP</sub> =</p>
+          <input class="ligne" type="text" placeholder="… V">
+        </div>
+        <div>
+          <p>I<sub>MPP</sub> =</p>
+          <input class="ligne" type="text" placeholder="… A">
+        </div>
+      </div>
+      <p><strong>Q2.</strong> Calculer P<sub>max</sub> = U<sub>MPP</sub> × I<sub>MPP</sub> :</p>
+      <input class="ligne" type="text" placeholder="P_max = … × … = … W">
+      <p><strong>Q3.</strong> Comparer P<sub>max</sub> à la puissance crête de la plaque
+        signalétique :</p>
+      <textarea class="zone zone-sm"
+                placeholder="P_max mesurée = … W · P_crête plaque = … W · Écart : …"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Le point MPP est le maximum de la courbe P = f(U).
+            La puissance maximale mesurée se rapproche de la
+            <span class="br">puissance crête (Wc)</span> du panneau,
+            mais reste souvent légèrement inférieure
+            (conditions réelles, pertes thermiques).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 2.4 Irradiance -->
+  <div class="exo">
+    <div class="exo-hdr mod-teal"
+         style="background:linear-gradient(90deg,var(--teal),#26a69a);">
+      <div class="num">2.4</div>
+      <div class="titre">Influence de l'irradiance</div>
+    </div>
+    <div class="exo-body">
+      <ol>
+        <li>Recommencer quelques mesures en changeant l'irradiance :
+          ensoleillement direct · panneau partiellement masqué ·
+          panneau éclairé par un projecteur.
+        </li>
+        <li>Comparer qualitativement les courbes P(U) obtenues.</li>
+      </ol>
+      <textarea class="zone"
+        placeholder="Quand l'irradiance augmente, I_sc … et P_max … car …"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Quand l'irradiance augmente, le courant de court-circuit
+            <span class="br">I<sub>sc</sub> augmente presque proportionnellement</span>
+            et la puissance maximale augmente.
+            Les courbes P(U) sont « plus hautes » lorsque l'ensoleillement est plus fort.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 3 – ANIMATION FLASH
+  ══════════════════════════════════ -->
+  <div class="section-titre">🎮 Partie 3 – Animation « Caractéristique panneau PV 50 Wc »</div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Modélisation numérique</h2>
+    <div class="cours">
+      <h3>📐 Panneau de référence : 50 Wc</h3>
+      <p>Cette animation (Flash émulée via Ruffle) modélise le comportement d'un
+        panneau photovoltaïque de <strong>50 Wc</strong> sous différentes conditions
+        d'ensoleillement et de température.</p>
+    </div>
+    <div class="tip">
+      <strong>Note :</strong> Cette animation nécessite un serveur local
+      (Live Server VS Code ou <code>python -m http.server</code>)
+      pour fonctionner correctement via Ruffle.
+    </div>
+    <figure style="margin:1rem 0;">
+      <div style="position:relative; width:100%; height:400px;
+                  border-radius:12px; overflow:hidden;
+                  box-shadow:0 8px 24px rgba(0,0,0,0.15);">
+        <object data="../videos/electro-10-panneaux-solaires-puissance-crete.swf"
+                width="100%" height="100%"
+                type="application/x-shockwave-flash">
+          <param name="allowScriptAccess" value="sameDomain">
+          <param name="wmode" value="opaque">
+          <p>Navigateur incompatible Flash.
+             <a href="../videos/electro-10-panneaux-solaires-puissance-crete.swf">
+               Télécharger le fichier SWF</a>.
+          </p>
+        </object>
+      </div>
+      <figcaption>Animation : caractéristique d'un panneau de 50 Wc.
+        Régler l'irradiance (G) et observer les courbes I(V) et P(V).</figcaption>
+    </figure>
+  </div>
+
+  <!-- 3.1 Conditions NTP -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">3.1</div>
+      <div class="titre">Prise en main – Conditions NTP (G = 1000 W/m²)</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Régler l'irradiance à <strong>1000 W/m²</strong> (conditions NTP)
+        et compléter le tableau :
+      </div>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Grandeur</th>
+            <th>Valeur lue</th>
+            <th>Unité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">U<sub>MPP</sub></td>
+            <td><input type="text" placeholder="…"></td>
+            <td>V</td>
+          </tr>
+          <tr>
+            <td class="gauche">I<sub>MPP</sub></td>
+            <td><input type="text" placeholder="…"></td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td class="gauche">P<sub>max</sub></td>
+            <td><input type="text" placeholder="…"></td>
+            <td>W</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>P<sub>max</sub> ≈ <span class="br">50 W</span> (puissance crête) ·
+            U<sub>MPP</sub> ≈ <span class="br">17 V</span> ·
+            I<sub>MPP</sub> ≈ <span class="br">3 A</span>
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 3.2 Influence irradiance -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">3.2</div>
+      <div class="titre">Influence de l'irradiance G</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Faire varier G : 1000 → 600 → 200 W/m² et observer les évolutions.
+      </div>
+
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Grandeur</th>
+            <th>G = 1000 W/m²</th>
+            <th>G = 600 W/m²</th>
+            <th>G = 200 W/m²</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">I<sub>sc</sub> (A)</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">U<sub>oc</sub> (V)</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">P<sub>max</sub> (W)</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:.8rem;"><strong>Q.</strong> I<sub>sc</sub> est-il
+        proportionnel à G ? Calculer le rapport
+        I<sub>sc</sub>(1000) / I<sub>sc</sub>(200) :</p>
+      <input class="ligne" type="text"
+             placeholder="Rapport = … / … = …  → Conclusion : …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>I<sub>sc</sub> <span class="br">diminue</span> quand G diminue
+            (quasi linéairement).</p>
+          <p>U<sub>oc</sub> <span class="br">varie très peu</span>
+            (quasiment constante).</p>
+          <p>P<sub>max</sub> <span class="br">diminue fortement</span>
+            quand G diminue.</p>
+          <p>Rapport : I<sub>sc</sub>(1000) ≈
+            <span class="br">5 × I<sub>sc</sub>(200)</span>
+            car 1000/200 = 5 → <strong>proportionnalité vérifiée</strong>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 3.3 Influence température -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">3.3</div>
+      <div class="titre">Influence de la température</div>
+    </div>
+    <div class="exo-body">
+      <figure style="text-align:center; margin:0 0 1rem;">
+        <img src="../images/Influence-temperature-panneau-photovoltaique.png"
+             alt="Courbes I(V) pour différentes températures"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Courbes I(V) à G = 1000 W/m² pour T = −10°C, 25°C, 75°C.</figcaption>
+      </figure>
+
+      <p><strong>Q1.</strong> Relever U<sub>oc</sub> et P<sub>max</sub>
+        pour chaque température :</p>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Température (°C)</th>
+            <th>U<sub>oc</sub> (V)</th>
+            <th>P<sub>max</sub> (W)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">−10</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">25</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">75</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:.8rem;"><strong>Q2.</strong> Décrire l'évolution de
+        U<sub>oc</sub> et P<sub>max</sub> quand la température augmente :</p>
+      <textarea class="zone zone-sm"
+        placeholder="Quand T augmente, U_oc … et P_max … car …"></textarea>
+
+      <p><strong>Q3.</strong> Identifier les meilleures conditions
+        de fonctionnement d'un panneau PV :</p>
+      <input class="ligne" type="text"
+             placeholder="Meilleures conditions : G … et T …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q2.</strong> U<sub>oc</sub>
+            <span class="br">diminue</span> quand T augmente ;
+            P<sub>max</sub> <span class="br">diminue</span> également.
+          </p>
+          <p><strong>Q3.</strong> Meilleures conditions :
+            <span class="br">fort ensoleillement (G élevé)</span> et
+            <span class="br">température faible</span>
+            (panneau bien ventilé).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 3.4 Formalisation -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">3.4</div>
+      <div class="titre">Formalisation – Compléter les phrases</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Compléter les phrases suivantes à partir des observations :
+      </div>
+      <p><strong>1.</strong> Le courant (I<sub>sc</sub>, I<sub>MPP</sub>) est
+        à peu près _______ à l'irradiance G.</p>
+      <input class="ligne" type="text" placeholder="…">
+      <p><strong>2.</strong> La tension U<sub>oc</sub> varie _______
+        quand G change.</p>
+      <input class="ligne" type="text" placeholder="…">
+      <p><strong>3.</strong> La puissance maximale P<sub>max</sub> _______
+        quand l'irradiance _______.</p>
+      <input class="ligne" type="text" placeholder="…">
+      <p><strong>4.</strong> Quand la température augmente, U<sub>oc</sub>
+        _______ et P<sub>max</sub> _______.</p>
+      <input class="ligne" type="text" placeholder="…">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>1. <span class="br">proportionnel</span></p>
+          <p>2. <span class="br">peu</span></p>
+          <p>3. <span class="br">augmente</span> / <span class="br">augmente</span></p>
+          <p>4. <span class="br">diminue</span> / <span class="br">diminue</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 3 BIS – ANIMATION DIMENSIONNEMENT
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🏔️ Partie 3 bis – Animation : dimensionnement pour un site isolé
+  </div>
+
+  <div class="bloc">
+    <h2>Découverte – Chalet de montagne isolé</h2>
+    <div class="cours">
+      <h3>📋 Objectif</h3>
+      <p>Avant de dimensionner l'installation du local vélos + trottinettes,
+        explorer la démarche complète sur un
+        <strong>chalet de montagne isolé</strong> :
+        géolocalisation → définition du besoin → choix des composants
+        (panneaux, régulateur, onduleur, batteries).</p>
+    </div>
+
+    <figure style="margin:1rem 0;">
+      <div style="position:relative; width:100%; height:500px;
+                  border-radius:12px; overflow:hidden;
+                  box-shadow:0 8px 24px rgba(0,0,0,0.15);">
+        <object data="../videos/dimensionnement_photovoltaique.swf"
+                width="100%" height="100%"
+                type="application/x-shockwave-flash">
+          <param name="allowScriptAccess" value="sameDomain">
+          <param name="wmode" value="opaque">
+          <p>Navigateur incompatible Flash.
+             <a href="../videos/dimensionnement_photovoltaique.swf">
+               Télécharger le fichier SWF</a>
+             ou activer l'extension Ruffle.
+          </p>
+        </object>
+      </div>
+      <figcaption>Animation Flash : dimensionnement complet d'une installation PV
+        autonome pour un chalet isolé.</figcaption>
+    </figure>
+
+    <div class="att">
+      <strong>📋 Points à observer :</strong>
+      <ol style="margin:.5rem 0 0 1rem;">
+        <li>Comment est défini le besoin énergétique journalier E<sub>j</sub> ?</li>
+        <li>Quel rôle joue la géolocalisation dans le dimensionnement ?</li>
+        <li>Quels critères guident le choix des panneaux ?</li>
+        <li>Quels paramètres déterminent le choix du régulateur de charge ?</li>
+        <li>Comment est dimensionné le parc de batteries ?</li>
+        <li>Quel type d'onduleur est retenu et pourquoi ?</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 4 – DIMENSIONNEMENT
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    📐 Partie 4 – Dimensionnement de l'installation – Local vélos + trottinettes
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Chaîne d'énergie PV autonome</h2>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/installation-pv.png"
+           alt="Schéma d'une installation photovoltaïque autonome"
+           style="max-width:700px; width:100%; border-radius:10px;
+                  box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+      <figcaption>Schéma d'une installation photovoltaïque autonome.</figcaption>
+    </figure>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/diagramme-energie-pv.png"
+           alt="Chaîne d'énergie d'une installation PV autonome"
+           style="max-width:700px; width:100%; border-radius:10px;
+                  box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+      <figcaption>Chaîne d'énergie :
+        Soleil → Panneaux PV → Régulateur → Batteries → Onduleur → Consommateurs.
+      </figcaption>
+    </figure>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/local-velos.PNG"
+           alt="Local vélos + trottinettes"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Local vélos + trottinettes alimenté par une installation PV autonome.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 4.a Énergie journalière -->
+  <div class="exo">
+    <div class="exo-hdr orange">
+      <div class="num">4.a</div>
+      <div class="titre">Énergie journalière E<sub>j</sub></div>
+    </div>
+    <div class="exo-body">
+      <div class="fml-bloc">
+        <div class="fml">E<sub>j</sub> = P × t</div>
+        <div class="fml-detail">
+          P : puissance en <strong>W</strong> ·
+          t : durée en <strong>h</strong> ·
+          E<sub>j</sub> : énergie journalière en <strong>Wh/j</strong>
+        </div>
+      </div>
+      <div class="def">
+        <strong>Données :</strong>
+        <ul style="margin:.4rem 0 0 1rem;">
+          <li>Recharge vélos + trottinettes : <strong>1 kWh/j</strong></li>
+          <li>Éclairage : <strong>8 lampes LED de 10 W</strong> ·
+              fonctionnement <strong>4 h/j</strong></li>
+        </ul>
+      </div>
+      <p>Calculer l'énergie totale quotidienne E<sub>j</sub> (en Wh/j) :</p>
+      <textarea class="zone"
+        placeholder="E_éclairage = 8 × 10 × 4 = … Wh/j&#10;E_recharge = … Wh/j&#10;E_j = … + … = … Wh/j"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>E<sub>éclairage</sub> = 8 × 10 × 4 =
+            <span class="br">320 Wh/j</span></p>
+          <p>E<sub>recharge</sub> =
+            <span class="br">1 000 Wh/j</span></p>
+          <p><strong>E<sub>j</sub> = 1 000 + 320 =
+            <span class="br">1 320 Wh/j = 1,32 kWh/j</span></strong>
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4.b Puissance crête -->
+  <div class="exo">
+    <div class="exo-hdr orange">
+      <div class="num">4.b</div>
+      <div class="titre">Puissance crête des panneaux P<sub>c</sub></div>
+    </div>
+    <div class="exo-body">
+      <div class="fml-bloc">
+        <div class="fml">P<sub>c</sub> = E<sub>j</sub> / (0,6 × E<sub>i</sub>)</div>
+        <div class="fml-detail">
+          P<sub>c</sub> : puissance crête en <strong>kWc</strong> ·
+          E<sub>j</sub> : énergie journalière en <strong>kWh/j</strong> ·
+          E<sub>i</sub> : gisement solaire en <strong>kWh/m²/j</strong> ·
+          0,6 : coefficient de pertes
+        </div>
+      </div>
+
+      <p><strong>Q1.</strong> Déterminer E<sub>i</sub> pour la région du lycée
+        (carte ci-dessous) :</p>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/ensoleillement-pv.PNG"
+             alt="Carte du gisement solaire en France"
+             style="max-width:500px; width:100%; border-radius:8px;
+                    box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <figcaption>Gisement solaire moyen en France (kWh/m²/j),
+          surface orientée plein sud.</figcaption>
+      </figure>
+      <input class="ligne" type="text"
+             placeholder="E_i ≈ … kWh/m²/j (région : …)">
+
+      <p><strong>Q2.</strong> Calculer P<sub>c</sub> :</p>
+      <textarea class="zone zone-sm"
+        placeholder="P_c = E_j / (0,6 × E_i) = … / (0,6 × …) = … kWc = … Wc"></textarea>
+
+      <p><strong>Q3.</strong> Déduire le nombre de panneaux nécessaires
+        (panneau de référence : <strong>275 Wc</strong>) :</p>
+      <input class="ligne" type="text"
+             placeholder="Nombre = P_c / 275 = … → … panneaux de 275 Wc">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Exemple pour Grenoble :
+            E<sub>i</sub> ≈ <span class="br">4 kWh/m²/j</span>
+          </p>
+          <p>P<sub>c</sub> = 1,32 / (0,6 × 4) = 1,32 / 2,4 ≈
+            <span class="br">0,55 kWc = 550 Wc</span>
+          </p>
+          <p>Nombre de panneaux = 550 / 275 =
+            <span class="br">2 panneaux de 275 Wc</span>
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4.c Batteries -->
+  <div class="exo">
+    <div class="exo-hdr orange">
+      <div class="num">4.c</div>
+      <div class="titre">Capacité des batteries C</div>
+    </div>
+    <div class="exo-body">
+      <div class="fml-bloc">
+        <div class="fml">C = (N<sub>j</sub> × E<sub>j</sub>) / (D<sub>p</sub> × V)</div>
+        <div class="fml-detail">
+          C : capacité en <strong>Ah</strong> ·
+          N<sub>j</sub> : jours d'autonomie ·
+          D<sub>p</sub> : coefficient de décharge profonde ·
+          V : tension de batterie en <strong>V</strong>
+        </div>
+      </div>
+
+      <table class="tl" style="margin:.8rem 0;">
+        <thead>
+          <tr>
+            <th class="gauche">Symbole</th>
+            <th class="gauche">Signification</th>
+            <th>Valeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">E<sub>j</sub></td>
+            <td class="gauche">Énergie journalière (Wh/j)</td>
+            <td>Valeur calculée en 4.a</td>
+          </tr>
+          <tr>
+            <td class="gauche">N<sub>j</sub></td>
+            <td class="gauche">Nombre de jours d'autonomie</td>
+            <td>2 jours</td>
+          </tr>
+          <tr>
+            <td class="gauche">D<sub>p</sub></td>
+            <td class="gauche">Coefficient de décharge profonde</td>
+            <td>0,8</td>
+          </tr>
+          <tr>
+            <td class="gauche">V</td>
+            <td class="gauche">Tension de la batterie (V)</td>
+            <td>24 V</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Calculer la capacité C en Ah :</p>
+      <textarea class="zone zone-sm"
+        placeholder="C = (N_j × E_j) / (D_p × V) = (… × …) / (… × …) = … Ah"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>C = (2 × 1 320) / (0,8 × 24)
+            = 2 640 / 19,2 ≈
+            <span class="br">137,5 Ah</span>
+          </p>
+          <p>→ Choisir un pack batteries d'au moins
+            <span class="br">140 Ah sous 24 V</span>.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4 bis Régulateur et onduleur -->
+  <div class="exo">
+    <div class="exo-hdr orange">
+      <div class="num">4 bis</div>
+      <div class="titre">Régulateur de charge et onduleur – Rôles</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À partir d'une recherche sur internet, expliquer le rôle de chacun
+        de ces composants :
+      </div>
+      <p><strong>Q1.</strong> Rôle du <strong>régulateur de charge</strong> :</p>
+      <textarea class="zone"
+        placeholder="Le régulateur de charge contrôle …"></textarea>
+      <p><strong>Q2.</strong> Rôle de l'<strong>onduleur</strong> :</p>
+      <textarea class="zone"
+        placeholder="L'onduleur convertit …"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1. Régulateur de charge :</strong>
+            Le régulateur contrôle le courant entrant dans les batteries depuis les panneaux.
+            Il protège contre la
+            <span class="br">surcharge</span> et la
+            <span class="br">décharge excessive</span>,
+            optimisant ainsi la durée de vie des batteries.
+          </p>
+          <p><strong>Q2. Onduleur :</strong>
+            L'onduleur convertit la
+            <span class="br">tension continue (DC)</span>
+            issue des batteries en
+            <span class="br">tension alternative (AC) 230 V / 50 Hz</span>,
+            compatible avec les appareils électriques standard.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 5 – PVGIS
+  ══════════════════════════════════ -->
+  <div class="section-titre">🌐 Partie 5 – Vérification via PVGIS</div>
+
+  <div class="exo">
+    <div class="exo-hdr vert">
+      <div class="num">5</div>
+      <div class="titre">Simulateur PVGIS – Production annuelle estimée</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À l'aide du simulateur en ligne
+        <a href="https://re.jrc.ec.europa.eu/pvg_tools/fr/"
+           target="_blank" rel="noopener"
+           style="color:var(--vert); font-weight:600;">
+          PVGIS (Commission Européenne) ↗
+        </a>,
+        vérifier la cohérence de l'installation dimensionnée avec le besoin réel.
+      </div>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/europa-eu-pv.PNG"
+             alt="Interface du simulateur PVGIS"
+             style="max-width:700px; width:100%; border-radius:10px;
+                    box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+        <figcaption>Interface du simulateur PVGIS.</figcaption>
+      </figure>
+
+      <ol>
+        <li>Indiquer la localisation du lycée sur la carte PVGIS.</li>
+        <li>Saisir la puissance crête P<sub>c</sub> calculée précédemment.</li>
+        <li>Lire la production annuelle estimée (kWh/an)
+            et la production mensuelle (kWh/mois).</li>
+        <li>Repérer le mois le moins productif et évaluer si l'installation
+            reste adaptée en hiver.</li>
+      </ol>
+
+      <p><strong>Production annuelle estimée :</strong></p>
+      <input class="ligne" type="text" placeholder="… kWh/an">
+      <p><strong>Mois le moins productif :</strong></p>
+      <input class="ligne" type="text"
+             placeholder="Mois : … · Production : … kWh · Besoin : … kWh → …">
+      <p><strong>Conclusion :</strong></p>
+      <textarea class="zone"
+        placeholder="En hiver, l'installation …"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>La production mensuelle est plus faible en
+            <span class="br">hiver</span>
+            (irradiance réduite, jours plus courts).</p>
+          <p>L'installation peut être
+            <span class="br">juste en hiver et surdimensionnée en été</span>.
+            Un appoint (réseau électrique, autre source) peut être envisagé
+            pour les périodes déficitaires.
+          </p>
+          <figure style="text-align:center; margin:1rem 0;">
+            <img src="../images/resultats-site-pv1.png"
+                 alt="Résultats PVGIS – production annuelle et mensuelle"
+                 style="max-width:700px; width:100%; border-radius:10px;
+                        box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+            <figcaption>Résultats PVGIS : production annuelle et mensuelle.</figcaption>
+          </figure>
+          <figure style="text-align:center; margin:1rem 0;">
+            <img src="../images/resultats-site-pv.png"
+                 alt="Résultats PVGIS – détail mensuel"
+                 style="max-width:700px; width:100%; border-radius:10px;
+                        box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+            <figcaption>Résultats PVGIS : détail mensuel et analyse saisonnière.</figcaption>
+          </figure>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 6 – SYNTHÈSE
+  ══════════════════════════════════ -->
+  <div class="section-titre">📊 Partie 6 – Synthèse – Lien avec la Séquence F</div>
+
+  <div class="exo">
+    <div class="exo-hdr violet">
+      <div class="num">6</div>
+      <div class="titre">Comparaison des chaînes d'énergie de la Séquence F</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Compléter le tableau pour comparer la chaîne d'énergie du local
+        photovoltaïque avec deux autres systèmes de la Séquence F.
+      </div>
+      <div class="tableau">
+        <table class="tl">
+          <thead>
+            <tr>
+              <th class="gauche">Système</th>
+              <th>Source d'énergie</th>
+              <th>Conversion principale</th>
+              <th>Stockage</th>
+              <th>Sortie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="gauche"><strong>Local vélos PV</strong></td>
+              <td>Lumière du soleil</td>
+              <td>Lumière → Électricité</td>
+              <td>Batteries</td>
+              <td>Recharge VAE / Éclairage</td>
+            </tr>
+            <tr>
+              <td class="gauche"><strong>Chaîne MAS</strong></td>
+              <td><input type="text" placeholder="…"></td>
+              <td><input type="text" placeholder="…"></td>
+              <td><input type="text" placeholder="…"></td>
+              <td>Rotation (arbre moteur)</td>
+            </tr>
+            <tr>
+              <td class="gauche"><strong>VAE</strong></td>
+              <td><input type="text" placeholder="…"></td>
+              <td><input type="text" placeholder="…"></td>
+              <td><input type="text" placeholder="…"></td>
+              <td>Aide au pédalage</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Chaîne MAS :</strong>
+            source <span class="br">réseau électrique</span> ·
+            conversion <span class="br">élec → mécanique</span>
+            (moteur asynchrone) · stockage <span class="br">absent</span>
+          </p>
+          <p><strong>VAE :</strong>
+            source <span class="br">batterie (chimique)</span> ·
+            conversion <span class="br">chimique → électrique → mécanique</span> ·
+            stockage <span class="br">batterie Li-ion</span>
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ── À RETENIR ── -->
+  <section style="background:var(--blanc);
+    border:2px solid var(--teal);
+    border-left:6px solid var(--teal);
+    border-radius:8px;padding:1.4rem 1.8rem;
+    margin-bottom:2rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.07);">
+    <h2 style="color:var(--teal);font-size:1.1rem;
+               font-weight:800;margin-bottom:.9rem;">
+      📌 À retenir – Essentiel
+    </h2>
+    <div class="grid2">
+      <div>
+        <p style="font-weight:700;color:var(--teal);margin-bottom:.3rem;">
+          ☀️ Comportement d'un panneau PV
+        </p>
+        <ul style="font-size:.88rem;margin-left:1.1rem;">
+          <li>I<sub>sc</sub> ∝ irradiance G</li>
+          <li>U<sub>oc</sub> peu sensible à G, diminue si T↑</li>
+          <li>P<sub>max</sub> = U<sub>MPP</sub> × I<sub>MPP</sub></li>
+          <li>Panneau froid = meilleur rendement</li>
+        </ul>
+        <p style="font-weight:700;color:var(--bleu);margin:.6rem 0 .3rem;">
+          🔗 Composants clés
+        </p>
+        <ul style="font-size:.88rem;margin-left:1.1rem;">
+          <li><strong>Régulateur</strong> : protège les batteries</li>
+          <li><strong>Onduleur</strong> : DC → AC 230 V / 50 Hz</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700;color:var(--orange);margin-bottom:.3rem;">
+          🔢 Formules de dimensionnement
+        </p>
+        <div style="font-family:'Courier New';font-size:.86rem;
+             background:#f3f4f6;border-radius:4px;
+             padding:.6rem .9rem;line-height:2;">
+          E<sub>j</sub> = P × t (Wh/j)<br>
+          P<sub>c</sub> = E<sub>j</sub> / (0,6 × E<sub>i</sub>)<br>
+          C = (N<sub>j</sub> × E<sub>j</sub>) / (D<sub>p</sub> × V)
+        </div>
+        <p style="font-weight:700;color:var(--vert);margin:.6rem 0 .3rem;">
+          🌐 Outil PVGIS
+        </p>
+        <p style="font-size:.88rem;">
+          Simulateur EU pour estimer la production réelle
+          selon la localisation et l'orientation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVIGATION BAS ── -->
+  <nav class="nav-bas">
+    <a href="activite-energies.html" class="nav-btn">
+      ← Précédent<span>1. Énergies</span>
+    </a>
+    <div class="centre">Module 1 · Activité 2 / 6 · Photovoltaïque</div>
+    <a href="activite-chaine-energie-MAS.html" class="nav-btn">
+      Suivant →<span>3. MAS</span>
+    </a>
+  </nav>
+
+</div><!-- /page -->
+
+<footer>
+  <p>Séquence F – STI2D · Lycée ·
+  <a href="../index.html">Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>

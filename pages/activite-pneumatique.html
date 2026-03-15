@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activité 4 – Pneumatique · Séquence F</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="inner">
+    <div class="badge">Module 1 · Activité 4 / 6</div>
+    <h1>💨 L'énergie pneumatique</h1>
+    <p class="meta">Séquence F · 2nde / 1re STI2D ·
+      ⏱ 3h · Travail en binôme · CO3.1 · CO3.2 · CO3.3</p>
+  </div>
+</header>
+
+<!-- ── BARRE NAVIGATION ACTIVITÉS ── -->
+<nav class="nav-activites">
+  <div class="nav-activites-inner">
+    <a href="../index.html" class="nav-home-btn">⌂ Séquence F</a>
+    <span class="nav-sep">›</span>
+    <span class="nav-module-label">Module 1</span>
+    <span class="nav-sep">›</span>
+    <div class="nav-acts">
+      <a href="activite-energies.html"
+         class="nav-act">1 · Énergies</a>
+      <a href="activite-photovoltaique.html"
+         class="nav-act mod-teal">2 · Photovoltaïque</a>
+      <a href="activite-chaine-energie-MAS.html"
+         class="nav-act mod-violet">3 · MAS</a>
+      <a href="activite-pneumatique.html"
+         class="nav-act mod-orange active">4 · Pneumatique</a>
+      <a href="activite-vae-voiture.html"
+         class="nav-act mod-vert">5 · VAE</a>
+      <a href="activite-voiture-demain.html"
+         class="nav-act mod-cyan">6 · Voiture demain</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ── OBJECTIFS ── -->
+  <div class="bloc">
+    <h2>🎯 Mise en situation et objectifs</h2>
+    <p>
+      Une usine d'emballage souhaite installer un système pour réaliser le
+      <strong>transfert à 90° des paquets</strong> d'une chaîne automatisée
+      commandée par une carte électronique. Les ingénieurs doivent choisir la
+      <strong>chaîne pneumatique</strong> la plus adaptée.
+    </p>
+    <div class="att">
+      <strong>Problématique :</strong> quel ensemble
+      <strong>distributeur – vérin</strong> choisir pour assurer le transfert
+      des paquets à 90° ?
+    </div>
+    <div style="margin-top:.8rem;">
+      <span class="tag">Travail en binôme</span>
+      <span class="tag">Durée : 3h</span>
+      <span class="tag">CO3.1 · CO3.2 · CO3.3</span>
+    </div>
+  </div>
+
+  <!-- Vidéo mise en situation -->
+  <div class="notice-audio">
+    <span>🎧</span> Brancher les écouteurs avant de lancer la vidéo.
+  </div>
+
+  <div class="bloc">
+    <h2>🎬 Vidéo – Transfert pneumatique à 90°</h2>
+    <div style="position:relative; width:100%; aspect-ratio:16/9;
+                border-radius:12px; overflow:hidden;
+                box-shadow:0 8px 24px rgba(0,0,0,0.15); margin-bottom:.5rem;">
+      <video controls preload="metadata" controlslist="nodownload"
+             style="position:absolute;top:0;left:0;
+                    width:100%;height:100%;
+                    object-fit:contain;background:#000;">
+        <source src="../videos/tri-90-pneu.mp4" type="video/mp4">
+        <p>Navigateur incompatible.
+           <a href="../videos/tri-90-pneu.mp4">Télécharger la vidéo</a>.
+        </p>
+      </video>
+    </div>
+    <p style="text-align:center; color:var(--text-secondary); font-size:.9rem;">
+      Exemple de transfert pneumatique de paquets à 90° (système industriel).
+    </p>
+  </div>
+
+  <!-- ── RESSOURCES ── -->
+  <div class="bloc bloc-ressources">
+    <h2>📥 Ressources – Documents de travail</h2>
+    <p class="bloc-intro">Télécharger les documents nécessaires :</p>
+    <ul class="liste-telechargements">
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">Pneumatisme – Sujet</span>
+        <div class="doc-liens">
+          <a href="../docs/Pneumatisme SU.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+          <a href="../docs/Pneumatisme SU.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">Pneumatisme – Document réponse</span>
+        <div class="doc-liens">
+          <a href="../docs/Pneumatisme DR.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+          <a href="../docs/Pneumatisme DR.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+      <li>
+        <span class="ico-pdf">✅</span>
+        <span class="doc-nom">Pneumatisme – Corrigé</span>
+        <div class="doc-liens">
+          <a href="../docs/Pneumatisme corrige.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 1 – STRUCTURE CHAÎNE PNEUMATIQUE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🔗 Partie 1 – Structure d'une chaîne pneumatique (DR1)
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Chaîne d'action pneumatique</h2>
+    <div class="tip">
+      <strong>📂 GDA :</strong> Ouvrir le Guide des automatismes →
+      Partie opérative → <em>« La chaîne d'action pneumatique »</em>
+    </div>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/dr1-pneu.PNG"
+           alt="Chaîne d'énergie pneumatique à compléter"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Chaîne pneumatique générale :
+        source d'air → distributeur → vérin → effecteur.</figcaption>
+    </figure>
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-orange"
+         style="background:linear-gradient(90deg,var(--orange),#ff8f00);">
+      <div class="num">1</div>
+      <div class="titre">Rôle de chaque élément de la chaîne pneumatique</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À l'aide du GDA, identifier et noter la fonction de chaque composant :
+      </div>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Élément</th>
+            <th class="gauche">Fonction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Source d'air comprimé</td>
+            <td><input type="text" placeholder="ex. fournir l'énergie pneumatique…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Distributeur</td>
+            <td><input type="text" placeholder="ex. orienter l'air vers le vérin…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Vérin</td>
+            <td><input type="text" placeholder="ex. convertir en mouvement linéaire…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Effecteur</td>
+            <td><input type="text" placeholder="ex. déplacer le paquet à 90°…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Source d'air comprimé :</strong>
+            fournit l'<span class="br">énergie pneumatique</span>
+            (air sous pression).</p>
+          <p><strong>Distributeur :</strong>
+            <span class="br">pré-actionneur</span> qui oriente l'air
+            comprimé vers une chambre du vérin ou vers l'échappement.</p>
+          <p><strong>Vérin :</strong>
+            <span class="br">actionneur</span> qui convertit l'énergie
+            pneumatique en <span class="br">mouvement linéaire</span>
+            (translation de la tige).</p>
+          <p><strong>Effecteur :</strong>
+            partie mécanique qui réalise la tâche
+            (<span class="br">transfert du paquet à 90°</span>).</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 2 – LE VÉRIN
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🔧 Partie 2 – L'actionneur : le vérin (DR2)
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Vérins pneumatiques</h2>
+    <div class="tip">
+      <strong>📂 GDA :</strong>
+      Index → <em>« Vérins (généralités) »</em> → parcourir les pages.
+    </div>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/dr2-pneu.PNG"
+           alt="Document réponse DR2 – vérins"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>DR2 – Représentations normalisées des vérins
+        (simple effet et double effet).</figcaption>
+    </figure>
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-orange"
+         style="background:linear-gradient(90deg,var(--orange),#ff8f00);">
+      <div class="num">2</div>
+      <div class="titre">Principe de fonctionnement – Vérin simple / double effet</div>
+    </div>
+    <div class="exo-body">
+      <p><strong>Principe de fonctionnement :</strong> expliquer comment
+        fonctionne un vérin pneumatique.</p>
+      <textarea class="zone zone-sm"
+        placeholder="L'air comprimé est envoyé dans … → la pression exerce … → la tige …">
+      </textarea>
+
+      <p style="font-weight:700; margin:.8rem 0 .4rem;">
+        Conversion d'énergie :
+      </p>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th>Énergie d'entrée</th>
+            <th>Énergie de sortie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" placeholder="ex. pneumatique (air comprimé)"></td>
+            <td><input type="text" placeholder="ex. mécanique (translation)"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700; margin:.9rem 0 .4rem;">
+        Vérin simple effet – retour en position de repos :
+      </p>
+      <div class="def">
+        📝 Compléter la représentation normalisée dans le
+        <strong>document réponse DR2</strong>.
+      </div>
+      <input class="ligne" type="text"
+             placeholder="Le retour se fait par …">
+
+      <p style="font-weight:700; margin:.9rem 0 .4rem;">
+        Vérin double effet – retour en position de repos :
+      </p>
+      <div class="def">
+        📝 Compléter la représentation normalisée dans le
+        <strong>document réponse DR2</strong>.
+      </div>
+      <input class="ligne" type="text"
+             placeholder="Le retour se fait par …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>L'air comprimé est envoyé dans une chambre du vérin → la pression
+            exerce une force sur le piston →
+            <span class="br">la tige se déplace</span>
+            (mouvement linéaire).</p>
+          <p>Énergie d'entrée :
+            <span class="br">pneumatique (air sous pression)</span> ·
+            Énergie de sortie :
+            <span class="br">mécanique de translation</span>.</p>
+          <p><strong>Vérin simple effet :</strong> une seule chambre alimentée,
+            retour par <span class="br">ressort de rappel</span>
+            ou par charge externe.</p>
+          <p><strong>Vérin double effet :</strong> les deux chambres peuvent être
+            alimentées, sortie et retour commandés par
+            <span class="br">l'air comprimé</span> (sans ressort).</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 3 – LE DISTRIBUTEUR
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🎛️ Partie 3 – Le pré-actionneur : le distributeur (DR3)
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Distributeurs pneumatiques</h2>
+    <div class="tip">
+      <strong>📂 GDA :</strong>
+      Index → <em>« Distributeurs »</em> → visualiser les pages.
+    </div>
+  </div>
+
+  <!-- 3a Fonctionnement -->
+  <div class="exo">
+    <div class="exo-hdr mod-orange"
+         style="background:linear-gradient(90deg,var(--orange),#ff8f00);">
+      <div class="num">3.a</div>
+      <div class="titre">Fonctionnement du distributeur</div>
+    </div>
+    <div class="exo-body">
+      <p><strong>Principe de fonctionnement :</strong></p>
+      <textarea class="zone zone-sm"
+        placeholder="Un distributeur est une vanne qui … selon sa position …">
+      </textarea>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr3-fonctionnement-pneu.PNG"
+             alt="Passage de l'air dans le distributeur"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Compléter en
+          <span style="color:#e53935;">rouge</span> le circuit sous pression,
+          en <span style="color:#1565c0;">bleu</span> l'échappement.
+        </figcaption>
+      </figure>
+
+      <p><strong>Distributeur 4/2 :</strong> donner la signification :</p>
+      <input class="ligne" type="text"
+             placeholder="4/2 signifie … orifices et … positions">
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr3-fonctionnement-pneu-2.PNG"
+             alt="Illustration distributeur 4/2"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Illustration du distributeur 4/2.</figcaption>
+      </figure>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Le distributeur est une
+            <span class="br">« vanne »</span> qui, selon sa position,
+            relie la source d'air à une sortie ou met cette sortie
+            à l'échappement.</p>
+          <p>Distributeur <strong>4/2</strong> :
+            <span class="br">4 orifices</span>
+            (alimentation, échappements, sorties vers le vérin) et
+            <span class="br">2 positions stables</span>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 3b Pilotage -->
+  <div class="exo">
+    <div class="exo-hdr mod-orange"
+         style="background:linear-gradient(90deg,var(--orange),#ff8f00);">
+      <div class="num">3.b</div>
+      <div class="titre">Pilotage des distributeurs – Monostable / Bistable</div>
+    </div>
+    <div class="exo-body">
+      <p><strong>Types de pilotage :</strong> donner la signification de chaque
+        mode (mécanique, manuel, pneumatique, électrique).</p>
+      <textarea class="zone zone-sm"
+        placeholder="Levier, galet, bouton-poussoir, commande électrique par électrovanne…">
+      </textarea>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr3-pilotage.PNG"
+             alt="Pilotage des distributeurs"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Différents modes de pilotage.</figcaption>
+      </figure>
+
+      <div class="grid2" style="margin:.8rem 0;">
+        <div>
+          <p><strong>Monostable :</strong></p>
+          <input class="ligne" type="text"
+                 placeholder="ex. une seule position stable…">
+        </div>
+        <div>
+          <p><strong>Bistable :</strong></p>
+          <input class="ligne" type="text"
+                 placeholder="ex. deux positions stables…">
+        </div>
+      </div>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Pilotages :
+            <span class="br">mécanique</span> (galet, levier) ·
+            <span class="br">manuel</span> (bouton-poussoir) ·
+            <span class="br">pneumatique</span> (par pression) ·
+            <span class="br">électrique</span> (électrovanne YV1, YV2…).
+          </p>
+          <p><strong>Monostable :</strong>
+            <span class="br">une seule position stable</span>
+            (retour automatique en position repos par ressort).</p>
+          <p><strong>Bistable :</strong>
+            <span class="br">deux positions stables</span>
+            (reste dans sa dernière position jusqu'à un nouveau pilotage).</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 3c Application distributeurs -->
+  <div class="exo">
+    <div class="exo-hdr mod-orange"
+         style="background:linear-gradient(90deg,var(--orange),#ff8f00);">
+      <div class="num">3.c</div>
+      <div class="titre">Application – Schémas et désignations des distributeurs</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Compléter les schémas de distributeurs ainsi que leur désignation
+        dans le DR3.
+      </div>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr3-application.PNG"
+             alt="Application sur les distributeurs"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Schémas des distributeurs à compléter.</figcaption>
+      </figure>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Exemples attendus :
+            <span class="br">3/2 monostable</span> (BP + ressort) ·
+            <span class="br">4/2 monostable</span> (YV + ressort) ·
+            <span class="br">5/2 bistable</span> (YV1 / YV2).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 4 – SIMULATION GDA-SIM
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    💻 Partie 4 – Simulation avec GdA-sim (DR4)
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Logiciel GdA-sim</h2>
+    <div class="cours">
+      <h3>🖥️ GdA-sim</h3>
+      La simulation se fait avec le logiciel <strong>GdA-sim</strong>.
+      Ouvrir chaque fichier indiqué, simuler le fonctionnement, puis
+      compléter les schémas (rouge = pression · bleu = échappement).
+    </div>
+  </div>
+
+  <!-- 4a Simple effet 3/2 monostable -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">4.a</div>
+      <div class="titre">Vérin simple effet – distributeur 3/2 monostable</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Ouvrir et simuler :
+        <em>« Vérin simple effet cde 3-2 monostable »</em>.
+      </div>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr4-simu-1.PNG"
+             alt="Vérin simple effet 3/2 monostable"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Surligner en
+          <span style="color:#e53935;">rouge</span> (pression) et
+          <span style="color:#1565c0;">bleu</span> (échappement)
+          pour BP1 non actionné / BP1 actionné.
+        </figcaption>
+      </figure>
+      <p><strong>Q.</strong> Que se passe-t-il lorsqu'on relâche BP1 ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>BP1 appuyé : l'air alimente la chambre →
+            <span class="br">la tige sort</span>.</p>
+          <p>BP1 relâché : le distributeur revient en position repos (ressort) →
+            la chambre est à l'échappement →
+            <span class="br">le vérin revient en position de repos</span>
+            (ressort de rappel).</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4b Double effet 4/2 monostable -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">4.b</div>
+      <div class="titre">Vérin double effet – distributeur 4/2 monostable</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Ouvrir et simuler :
+        <em>« Vérin double effet cde 4-2 monostable »</em>.
+      </div>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr4-simu-2.PNG"
+             alt="Vérin double effet 4/2 monostable"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Compléter les deux positions :
+          BP1 non actionné / BP1 actionné.</figcaption>
+      </figure>
+      <p><strong>Q.</strong> Que se passe-t-il lorsqu'on relâche BP1 ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>BP1 non actionné : une chambre alimentée, l'autre à l'échappement →
+            <span class="br">vérin en position repos</span>.</p>
+          <p>BP1 actionné :
+            <span class="br">inversion des chambres</span>
+            → la tige se déplace dans l'autre sens.</p>
+          <p>BP1 relâché : retour à la position initiale
+            (<span class="br">monostable</span>).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4c Double effet 5/2 bistable -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">4.c</div>
+      <div class="titre">Vérin double effet – distributeur 5/2 bistable</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Ouvrir et simuler :
+        <em>« Vérin double effet cde 5-2 bistable »</em>.
+      </div>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr4-simu-3.PNG"
+             alt="Vérin double effet 5/2 bistable"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Représenter les deux positions du tiroir
+          (vérin sorti / vérin rentré).</figcaption>
+      </figure>
+      <p><strong>Q.</strong> Que se passe-t-il lorsqu'on relâche BP1 ou BP2 ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Chaque impulsion (BP1 ou BP2) fait changer la position du tiroir et le
+            distributeur
+            <span class="br">reste dans cette position</span>
+            même après relâchement du bouton.</p>
+          <p>Le vérin
+            <span class="br">garde sa position</span>
+            (sorti ou rentré) jusqu'à la prochaine action sur l'autre bouton.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 4d Bistable + bloqueurs -->
+  <div class="exo">
+    <div class="exo-hdr bleu">
+      <div class="num">4.d</div>
+      <div class="titre">Vérin double effet – 5/2 bistable avec bloqueurs</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Ouvrir et simuler :
+        <em>« Vérin double effet cde 5-2 bistable bloqueur »</em>.
+      </div>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr4-simu-4.PNG"
+             alt="Vérin double effet 5/2 bistable avec bloqueurs"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>5/2 bistable avec bloqueurs.</figcaption>
+      </figure>
+
+      <p><strong>Q1.</strong> Que se passe-t-il lorsqu'on appuie sur BPAU ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+      <p><strong>Q2.</strong> Quelle est l'utilité des bloqueurs ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1.</strong> BPAU actionné : les bloqueurs (distributeurs 2/2)
+            <span class="br">coupent l'alimentation d'air</span>
+            → le vérin se met en sécurité.</p>
+          <p><strong>Q2.</strong> Les bloqueurs servent à
+            <span class="br">sécuriser l'installation</span>
+            en cas d'arrêt d'urgence ou de défaut
+            (coupure de la pression vers le vérin).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 5 – APPLICATION 1
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    📐 Partie 5 – Application 1 (DR5)
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-orange"
+         style="background:linear-gradient(90deg,var(--orange),#ff8f00);">
+      <div class="num">5</div>
+      <div class="titre">Simulation Application 1 – Capteur Sa</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Reproduire le schéma ci-dessous dans GdA-sim, simuler, puis
+        expliquer le fonctionnement et identifier le capteur Sa.
+      </div>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/dr5-pneu.PNG"
+             alt="Application 1 pneumatique"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Schéma Application 1 – à reproduire et simuler avec GdA-sim.</figcaption>
+      </figure>
+
+      <p><strong>Fonctionnement de l'application :</strong></p>
+      <textarea class="zone"
+        placeholder="Décrire les étapes : sortie du vérin, déclenchement par capteur,
+rentrée, etc."></textarea>
+
+      <p><strong>Capteur Sa :</strong> nom et fonction :</p>
+      <input class="ligne" type="text"
+             placeholder="Sa est un … qui détecte …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Sa est un
+            <span class="br">détecteur magnétique (type ILS)</span>
+            monté sur le vérin.</p>
+          <p>Il détecte la
+            <span class="br">position de la tige</span>
+            (sortie / rentrée) et renvoie une information à la chaîne
+            de commande pour déclencher la suite du cycle ou arrêter
+            le mouvement.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 6 – PARTIE PRATIQUE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🛠️ Partie 6 – Partie pratique – Câblage
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-orange"
+         style="background:linear-gradient(90deg,var(--orange),#ff8f00);">
+      <div class="num">6</div>
+      <div class="titre">Câblage pneumatique et électrique</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À partir des schémas de la partie 4b (vérin double effet + 4/2 monostable)
+        et 4c (vérin double effet + 5/2 bistable), réaliser :
+      </div>
+      <ul>
+        <li>Le câblage du <strong>schéma pneumatique</strong>.</li>
+        <li>Le câblage du <strong>schéma électrique</strong>
+            (commande des électrovannes).</li>
+      </ul>
+      <div class="att">
+        <strong>⚠️ Faire vérifier et tester l'installation
+        en présence du professeur.</strong>
+      </div>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/banc-pneumatique.png"
+             alt="Banc d'essai pneumatique"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Banc d'essai pneumatique et électrique à câbler.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 7 – CONCLUSION
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    ✅ Partie 7 – Conclusion – Choix du vérin (DR6)
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr vert">
+      <div class="num">7</div>
+      <div class="titre">Réponse à la problématique – Vérin le plus adapté</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À l'aide de l'étude précédente (simulations, application, pratique),
+        répondre à la problématique :
+      </div>
+      <div class="att">
+        <strong>Quel est le vérin le plus adapté au transfert d'un paquet à 90° ?
+          Justifier le choix.</strong>
+      </div>
+      <textarea class="zone"
+        placeholder="Pour un transfert à 90°, le vérin … associé au distributeur …
+est le plus adapté car …"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p>Le choix se porte sur un
+            <span class="br">vérin double effet</span>
+            associé à un
+            <span class="br">distributeur 5/2 bistable</span>
+            (éventuellement avec bloqueurs et capteurs de fin de course),
+            car :
+          </p>
+          <ul style="margin:.4rem 0 0 1.2rem; font-size:.9rem;">
+            <li>contrôle de la sortie et de la rentrée par air comprimé,</li>
+            <li>maintien de la position (bistable),</li>
+            <li>sécurisation par bloqueurs et capteurs (Sa, a0, a1…).</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ── À RETENIR ── -->
+  <section style="background:var(--blanc);
+    border:2px solid var(--orange);
+    border-left:6px solid var(--orange);
+    border-radius:8px; padding:1.4rem 1.8rem;
+    margin-bottom:2rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.07);">
+    <h2 style="color:var(--orange); font-size:1.1rem;
+               font-weight:800; margin-bottom:.9rem;">
+      📌 À retenir – Essentiel
+    </h2>
+    <div class="grid2">
+      <div>
+        <p style="font-weight:700; color:var(--orange); margin-bottom:.3rem;">
+          💨 Composants de la chaîne pneumatique
+        </p>
+        <ul style="font-size:.88rem; margin-left:1.1rem;">
+          <li><strong>Source</strong> → ALIMENTER (air comprimé)</li>
+          <li><strong>Distributeur</strong> → DISTRIBUER (pré-actionneur)</li>
+          <li><strong>Vérin</strong> → CONVERTIR (pneumatique → mécanique)</li>
+          <li><strong>Effecteur</strong> → action sur le système</li>
+        </ul>
+        <p style="font-weight:700; color:var(--bleu); margin:.6rem 0 .3rem;">
+          🔧 Types de vérins
+        </p>
+        <ul style="font-size:.88rem; margin-left:1.1rem;">
+          <li><strong>Simple effet</strong> : retour par ressort</li>
+          <li><strong>Double effet</strong> : sortie et retour par air</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700; color:var(--violet); margin-bottom:.3rem;">
+          🎛️ Types de distributeurs
+        </p>
+        <div style="font-family:'Courier New'; font-size:.82rem;
+             background:#f3f4f6; border-radius:4px;
+             padding:.6rem .9rem; line-height:2.1;">
+          3/2 mono → vérin simple effet<br>
+          4/2 mono → vérin double effet<br>
+          5/2 bistable → maintien position<br>
+          Bloqueurs → sécurité (BPAU)
+        </div>
+        <p style="font-weight:700; color:var(--vert); margin:.6rem 0 .3rem;">
+          ✅ Choix pour transfert 90°
+        </p>
+        <p style="font-size:.88rem;">
+          <strong>Vérin double effet</strong> +
+          <strong>5/2 bistable</strong> + capteurs Sa →
+          contrôle précis et maintien de position.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVIGATION BAS ── -->
+  <nav class="nav-bas">
+    <a href="activite-chaine-energie-MAS.html" class="nav-btn">
+      ← Précédent<span>3. MAS</span>
+    </a>
+    <div class="centre">Module 1 · Activité 4 / 6 · Pneumatique</div>
+    <a href="activite-vae-voiture.html" class="nav-btn">
+      Suivant →<span>5. VAE</span>
+    </a>
+  </nav>
+
+</div><!-- /page -->
+
+<footer>
+  <p>Séquence F – STI2D · Lycée ·
+  <a href="../index.html">Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>

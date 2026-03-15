@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activité 3 – Chaîne d'énergie MAS · Séquence F</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="inner">
+    <div class="badge">Module 1 · Activité 3 / 6</div>
+    <h1>⚡ Le moteur asynchrone triphasé</h1>
+    <p class="meta">Séquence F · 2nde / 1re STI2D ·
+      ⏱ 3h · Travail en binôme · CO3.1 · CO3.2 · CO3.3</p>
+  </div>
+</header>
+
+<!-- ── BARRE NAVIGATION ACTIVITÉS ── -->
+<nav class="nav-activites">
+  <div class="nav-activites-inner">
+    <a href="../index.html" class="nav-home-btn">⌂ Séquence F</a>
+    <span class="nav-sep">›</span>
+    <span class="nav-module-label">Module 1</span>
+    <span class="nav-sep">›</span>
+    <div class="nav-acts">
+      <a href="activite-energies.html"
+         class="nav-act">1 · Énergies</a>
+      <a href="activite-photovoltaique.html"
+         class="nav-act mod-teal">2 · Photovoltaïque</a>
+      <a href="activite-chaine-energie-MAS.html"
+         class="nav-act mod-violet active">3 · MAS</a>
+      <a href="activite-pneumatique.html"
+         class="nav-act mod-orange">4 · Pneumatique</a>
+      <a href="activite-vae-voiture.html"
+         class="nav-act mod-vert">5 · VAE</a>
+      <a href="activite-voiture-demain.html"
+         class="nav-act mod-cyan">6 · Voiture demain</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ── OBJECTIFS ── -->
+  <div class="bloc">
+    <h2>🎯 Mise en situation et objectifs</h2>
+    <p>
+      Dans le cas de la manutention de pièces lourdes, il est souvent impossible
+      pour un opérateur de manipuler ou déplacer certains objets seul. La
+      législation du travail impose des limites aux charges soulevées. Pour
+      résoudre ce problème, on utilise des engins de type
+      <strong>pont roulant</strong>, <strong>palan</strong>,
+      <strong>portique</strong>…
+    </p>
+    <ul>
+      <li>Comment fonctionne un moteur asynchrone triphasé ?</li>
+      <li>Quelle est la composition de la chaîne d'énergie d'un moteur asynchrone ?</li>
+    </ul>
+    <div style="margin-top:.8rem;">
+      <span class="tag">Travail en binôme</span>
+      <span class="tag">Durée : 3h</span>
+      <span class="tag">CO3.1 · CO3.2 · CO3.3</span>
+    </div>
+  </div>
+
+  <!-- ── RESSOURCES ── -->
+  <div class="bloc bloc-ressources">
+    <h2>📥 Ressources – Documents de travail</h2>
+    <p class="bloc-intro">Télécharger les documents nécessaires :</p>
+    <ul class="liste-telechargements">
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">Chaîne d'énergie MAS – Sujet + Document réponse</span>
+        <div class="doc-liens">
+          <a href="../docs/Chaine energie MAS SU DR.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+          <a href="../docs/Chaine energie MAS SU DR.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── VIDÉOS MISE EN SITUATION ── -->
+  <div class="notice-audio">
+    <span>🎧</span> Brancher les écouteurs avant de lancer les vidéos.
+  </div>
+
+  <div class="bloc">
+    <h2>🎬 Vidéos – Systèmes de manutention</h2>
+    <div class="consigne">
+      Dans les deux cas présentés, on utilise un composant électrique dont
+      l'invention est à l'origine de la révolution industrielle :
+      le <strong>moteur asynchrone triphasé</strong>.
+    </div>
+    <div class="video-grid">
+      <div class="video-item">
+        <div class="video-container">
+          <video controls preload="metadata" controlslist="nodownload"
+                 style="position:absolute;top:0;left:0;
+                        width:100%;height:100%;
+                        object-fit:contain;background:#000;">
+            <source src="../videos/pontroulant.mp4" type="video/mp4">
+            <p>Navigateur incompatible.
+               <a href="../videos/pontroulant.mp4">Télécharger</a>.
+            </p>
+          </video>
+        </div>
+        <p>Pont roulant en action</p>
+      </div>
+      <div class="video-item">
+        <div class="video-container">
+          <video controls preload="metadata" controlslist="nodownload"
+                 style="position:absolute;top:0;left:0;
+                        width:100%;height:100%;
+                        object-fit:contain;background:#000;">
+            <source src="../videos/manipulateur.mp4" type="video/mp4">
+            <p>Navigateur incompatible.
+               <a href="../videos/manipulateur.mp4">Télécharger</a>.
+            </p>
+          </video>
+        </div>
+        <p>Manipulateur industriel</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 1 – CHAÎNE D'ÉNERGIE
+  ══════════════════════════════════ -->
+  <div class="section-titre">🔗 Partie 1 – La chaîne d'énergie</div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Structure générale</h2>
+    <div class="cours">
+      <h3>📐 Chaîne d'énergie d'un système technique</h3>
+      <p>Tout système est composé d'une <strong>chaîne d'information</strong>
+        et d'une <strong>chaîne d'énergie</strong>.</p>
+    </div>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/diagramme-mas.PNG"
+           alt="Diagramme du moteur asynchrone triphasé"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Chaîne d'énergie :
+        ALIMENTER → DISTRIBUER → CONVERTIR → TRANSMETTRE → Action.</figcaption>
+    </figure>
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-violet"
+         style="background:linear-gradient(90deg,var(--violet),#ab47bc);">
+      <div class="num">1</div>
+      <div class="titre">Question préliminaire – Chaîne d'énergie générale</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        À partir du schéma ci-dessus, compléter les cases de la chaîne d'énergie :
+      </div>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th>ALIMENTER</th>
+            <th>DISTRIBUER</th>
+            <th>CONVERTIR</th>
+            <th>TRANSMETTRE</th>
+            <th>Résultat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" placeholder="Source…"></td>
+            <td><input type="text" placeholder="Composant…"></td>
+            <td><input type="text" placeholder="Composant…"></td>
+            <td><input type="text" placeholder="Mécanisme…"></td>
+            <td><input type="text" placeholder="Effet…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>ALIMENTER :</strong>
+            <span class="br">Réseau triphasé 400 V</span></p>
+          <p><strong>DISTRIBUER :</strong>
+            <span class="br">Contacteur, sectionneur, relais thermique</span></p>
+          <p><strong>CONVERTIR :</strong>
+            <span class="br">Moteur asynchrone</span>
+            (électrique → mécanique)</p>
+          <p><strong>TRANSMETTRE :</strong>
+            <span class="br">Réducteur, câble, tambour</span></p>
+          <p><strong>Résultat :</strong>
+            <span class="br">Mouvement de la charge</span>
+            (montée / descente)</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 2 – CHAÎNE D'ÉNERGIE MAS
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🔌 Partie 2 – Chaîne d'énergie électrique du MAS
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Composants du départ moteur</h2>
+    <div class="grid2">
+      <div class="cours" style="margin:0;">
+        <h3>Q1 – Sectionneur à fusibles</h3>
+        Isolement du circuit + protection contre les courts-circuits
+      </div>
+      <div class="cours" style="margin:0;
+           background:var(--vert-pale); border-color:var(--vert);">
+        <h3 style="color:var(--vert);">KM1 – Contacteur</h3>
+        Commutation de la puissance sur ordre de la chaîne de commande
+      </div>
+    </div>
+    <div class="att" style="margin-top:.8rem;">
+      <strong>F1 – Relais thermique :</strong>
+      Protège le moteur contre les surcharges prolongées
+      (protection thermique, déclenchement en cas d'échauffement).
+    </div>
+
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/gda-mas.PNG"
+           alt="Schéma de puissance du départ moteur direct"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Schéma de puissance – départ moteur direct (Q1, KM1, F1, M).<br>
+        Source : Guide des automatismes.</figcaption>
+    </figure>
+  </div>
+
+  <!-- GDA -->
+  <div class="exo">
+    <div class="exo-hdr mod-violet"
+         style="background:linear-gradient(90deg,var(--violet),#ab47bc);">
+      <div class="num">2</div>
+      <div class="titre">Guide des automatismes (GDA) + Vidéo MAS</div>
+    </div>
+    <div class="exo-body">
+      <div class="tip">
+        <strong>📂 Chemin GDA :</strong>
+        Ouvrir le GDA → <strong>Index</strong> → lettre <strong>M</strong> →
+        <strong>Moteurs</strong> → <strong>Moteur asynchrone</strong>
+      </div>
+
+      <div class="notice-audio" style="margin:1rem 0;">
+        <span>🎧</span> Brancher les écouteurs avant de lancer la vidéo.
+      </div>
+
+      <div style="position:relative; width:100%; aspect-ratio:16/9;
+                  border-radius:12px; overflow:hidden; margin:1rem 0;
+                  box-shadow:0 8px 24px rgba(0,0,0,0.15);">
+        <video controls preload="metadata" controlslist="nodownload"
+               style="position:absolute;top:0;left:0;
+                      width:100%;height:100%;
+                      object-fit:contain;background:#000;">
+          <source src="../videos/principe-mas.mp4" type="video/mp4">
+          <p>Navigateur incompatible.
+             <a href="../videos/principe-mas.mp4">Télécharger la vidéo</a>.
+          </p>
+        </video>
+      </div>
+
+      <div class="consigne">
+        Ouvrir le GDA → <em>démarrage moteur triphasé</em> →
+        <em>départ moteur direct</em>, puis :
+      </div>
+      <ol>
+        <li>Compléter la chaîne d'énergie ci-dessous en notant, en couleur,
+            le nom du matériel associé à chaque fonction
+            (ALIMENTER, DISTRIBUER, CONVERTIR).</li>
+        <li>Encadrer ces matériels sur le schéma de puissance
+            avec les mêmes couleurs.</li>
+        <li>Noter les types d'énergies mis en jeu dans la chaîne.</li>
+      </ol>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/chaine-energie-mas-a-completer.png"
+             alt="Chaîne d'énergie MAS à compléter"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Compléter ce diagramme avec le matériel correspondant
+          à chaque fonction.</figcaption>
+      </figure>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>ALIMENTER :</strong>
+            <span class="br">Réseau triphasé 400 V / 50 Hz</span>
+            → sectionneur à fusibles Q1</p>
+          <p><strong>DISTRIBUER :</strong>
+            <span class="br">Contacteur KM1</span>
+            (+ relais thermique F1 pour protection)</p>
+          <p><strong>CONVERTIR :</strong>
+            <span class="br">Moteur asynchrone triphasé M</span>
+            (électrique → mécanique)</p>
+          <p><strong>TRANSMETTRE :</strong>
+            <span class="br">Arbre moteur → réducteur → tambour / câble</span>
+          </p>
+          <p>Énergies :
+            <span class="br">électrique triphasée</span> →
+            <span class="br">électrique protégée</span> →
+            <span class="br">mécanique de rotation</span> →
+            <span class="br">mécanique de translation</span> (charge)
+          </p>
+          <figure style="text-align:center; margin:1rem 0;">
+            <img src="../images/chaine_energie_MAS_corrigee.png"
+                 alt="Chaîne d'énergie MAS corrigée"
+                 style="max-width:100%; border-radius:6px;
+                        box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+            <figcaption>Correction – chaîne d'énergie complétée.</figcaption>
+          </figure>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 3 – 1 SENS SANS AUTO-MAINTIEN
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🔴 Partie 3 – Démarrage 1 sens · Sans auto-maintien
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-violet"
+         style="background:linear-gradient(90deg,var(--violet),#ab47bc);">
+      <div class="num">3</div>
+      <div class="titre">Câblage et table de vérité – Sans auto-maintien</div>
+    </div>
+    <div class="exo-body">
+      <figure style="text-align:center; margin:0 0 1rem;">
+        <img src="../images/schema-1-mas.png"
+             alt="Schéma circuit de commande sans auto-maintien"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Schéma du circuit de commande – 1 sens sans auto-maintien.</figcaption>
+      </figure>
+
+      <div class="consigne">
+        <ol>
+          <li>Câbler le schéma du circuit de commande.</li>
+          <li>Faire vérifier par le professeur avant la mise sous tension.</li>
+          <li>Vérifier que le disjoncteur magnéto-thermique est réarmé
+              (contacts Q2 fermés).</li>
+          <li>Maintenir le bouton <em>« Montée »</em> enfoncé et observer
+              KM1 et le moteur.</li>
+          <li>Tester les différentes combinaisons et compléter la table de vérité.</li>
+        </ol>
+      </div>
+
+      <div class="def">
+        <strong>Convention :</strong>
+        <strong>0</strong> = bouton au repos / contact ouvert / bobine non alimentée ·
+        <strong>1</strong> = bouton actionné / contact fermé / bobine alimentée
+      </div>
+
+      <p style="font-weight:700; margin:.8rem 0 .4rem;">
+        Table de vérité :
+      </p>
+      <table class="tl">
+        <thead>
+          <tr>
+            <th>Arrêt (S1)</th>
+            <th>Montée (S2)</th>
+            <th>KM1</th>
+            <th>Moteur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td><td>0</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td>0</td><td>1</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td>1</td><td>0</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td>1</td><td>1</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="text" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700; margin:.9rem 0 .3rem;">
+        Équation de la bobine KM1 :
+      </p>
+      <input class="ligne" type="text"
+             placeholder="KM1 = …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <table class="tl" style="margin:.4rem 0;">
+            <thead>
+              <tr>
+                <th>Arrêt (S1)</th><th>Montée (S2)</th>
+                <th>KM1</th><th>Moteur</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>0</td><td>0</td>
+                  <td class="zero">0</td>
+                  <td>Arrêté</td></tr>
+              <tr><td>0</td><td>1</td>
+                  <td class="nonzero">1</td>
+                  <td>Tourne (Montée)</td></tr>
+              <tr><td>1</td><td>0</td>
+                  <td class="zero">0</td>
+                  <td>Arrêté</td></tr>
+              <tr><td>1</td><td>1</td>
+                  <td class="zero">0</td>
+                  <td>Arrêté (S1 prioritaire)</td></tr>
+            </tbody>
+          </table>
+          <p><strong>KM1 =
+            <span class="br">S2 · /S1 · /F1</span></strong><br>
+            Sans auto-maintien : KM1 se coupe dès qu'on relâche S2.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 4 – AVEC AUTO-MAINTIEN
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🟢 Partie 4 – Démarrage 1 sens · Avec auto-maintien
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-violet"
+         style="background:linear-gradient(90deg,var(--violet),#ab47bc);">
+      <div class="num">4</div>
+      <div class="titre">Modification du câblage – Contact KM1 (53-54) en parallèle</div>
+    </div>
+    <div class="exo-body">
+      <div class="consigne">
+        Modifier le câblage en ajoutant le contact
+        <strong>KM1 (53-54)</strong> en parallèle sur le bouton
+        poussoir <em>« Montée »</em>.
+      </div>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/schema-1b-mas.png"
+             alt="Schéma circuit de commande avec auto-maintien"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Circuit de commande avec auto-maintien :
+          contact KM1 (53-54) en parallèle sur S2.</figcaption>
+      </figure>
+
+      <ol>
+        <li>Faire fonctionner le moteur et observer ce qui se passe.</li>
+        <li>Compléter le chronogramme ci-dessous.</li>
+      </ol>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/chrono-mas.png"
+             alt="Chronogramme à compléter"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Chronogramme : S2 (Montée), KM1, moteur en fonction du temps.</figcaption>
+      </figure>
+
+      <p style="font-weight:700; margin:.8rem 0 .3rem;">
+        Équation de KM1 avec auto-maintien :
+      </p>
+      <input class="ligne" type="text"
+             placeholder="KM1 = …">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>KM1 =
+            <span class="br">(S2 + KM1) · /S1 · /F1</span></strong></p>
+          <p>Le contact KM1 (53-54) en parallèle sur S2 assure l'auto-maintien :
+            une fois KM1 alimenté, il reste alimenté même si on relâche S2,
+            jusqu'à l'actionnement de S1 (arrêt) ou du relais thermique F1.
+          </p>
+          <figure style="text-align:center; margin:1rem 0;">
+            <img src="../images/chrono-mas-corr.png"
+                 alt="Chronogramme corrigé"
+                 style="max-width:100%; border-radius:6px;
+                        box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+            <figcaption>Chronogramme corrigé – auto-maintien de KM1.</figcaption>
+          </figure>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 5 – DEUX SENS
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🔄 Partie 5 – Démarrage · Deux sens de rotation
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-violet"
+         style="background:linear-gradient(90deg,var(--violet),#ab47bc);">
+      <div class="num">5</div>
+      <div class="titre">Câblage deux sens – Équations et verrouillages</div>
+    </div>
+    <div class="exo-body">
+      <figure style="text-align:center; margin:0 0 1rem;">
+        <img src="../images/schema-2-mas.png"
+             alt="Schéma circuit de commande deux sens de rotation"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Circuit de commande – deux sens de rotation
+          (KM1 Montée / KM2 Descente).</figcaption>
+      </figure>
+
+      <div class="consigne">
+        <ol>
+          <li>Câbler le circuit de commande.</li>
+          <li>Tester la commande dans les deux sens (Montée / Descente).</li>
+        </ol>
+      </div>
+
+      <p><strong>Q1.</strong> Que se passe-t-il si l'on appuie sur
+        « Descente » pendant la montée, ou sur « Montée » pendant
+        la descente ?</p>
+      <textarea class="zone zone-sm"
+        placeholder="Réponse…"></textarea>
+
+      <p><strong>Équations de KM1 et KM2 :</strong></p>
+      <input class="ligne" type="text"
+             placeholder="KM1 = …">
+      <input class="ligne" type="text"
+             placeholder="KM2 = …">
+
+      <p><strong>Raccordement des phases au moteur :</strong></p>
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/inversion-mas.png"
+             alt="Raccordement phases – Montée et Descente"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Raccordement L1/L2/L3 → U/V/W pour Montée et Descente.</figcaption>
+      </figure>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1.</strong> Sans verrouillage, les deux contacteurs KM1 et KM2
+            se fermeraient simultanément →
+            <span class="br">court-circuit triphasé</span>.</p>
+          <p><strong>KM1 =
+            <span class="br">(S2 + KM1) · /S1 · /KM2 · /F1</span></strong></p>
+          <p><strong>KM2 =
+            <span class="br">(S3 + KM2) · /S1 · /KM1 · /F1</span></strong></p>
+          <p>Montée : <span class="br">L1→U · L2→V · L3→W</span><br>
+            Descente : <span class="br">L1→W · L2→V · L3→U</span>
+            (inversion L1 et L3 → inversion du sens de rotation)
+          </p>
+        </div>
+      </details>
+
+      <!-- Q2 Court-circuit -->
+      <hr style="margin:1.2rem 0; border:none; border-top:1px solid #ddd;">
+
+      <p><strong>Q2.</strong> Que se passerait-il si KM1 et KM2 se ferment
+        en même temps ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+
+      <p><strong>Q3.</strong> Quelle solution <strong>TECHNIQUE</strong>
+        permet d'interdire l'activation simultanée de KM1 et KM2
+        dans le circuit de <strong>PUISSANCE</strong> ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+
+      <p><strong>Q4.</strong> Quelle solution <strong>ÉLECTRIQUE</strong>
+        permet d'interdire l'activation simultanée dans le circuit de
+        <strong>COMMANDE</strong> ?</p>
+      <textarea class="zone zone-sm" placeholder="Réponse…"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q2.</strong> Les phases L1, L2, L3 se retrouvent connectées
+            directement entre elles →
+            <span class="br">court-circuit triphasé</span> :
+            courant très élevé, destruction des contacts, risque incendie,
+            déclenchement des protections.
+          </p>
+          <p><strong>Q3.</strong>
+            <span class="br">Verrou mécanique (interlock)</span>
+            entre KM1 et KM2 : empêche physiquement les deux contacteurs
+            de se fermer en même temps.
+          </p>
+          <p><strong>Q4.</strong>
+            <span class="br">Verrouillage croisé</span> :
+            contact NC de KM2 en série dans la bobine de KM1,
+            et contact NC de KM1 en série dans la bobine de KM2.
+            Si KM1 est activé, son contact NC ouvre le circuit de KM2
+            (et réciproquement).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ── À RETENIR ── -->
+  <section style="background:var(--blanc);
+    border:2px solid var(--violet);
+    border-left:6px solid var(--violet);
+    border-radius:8px; padding:1.4rem 1.8rem;
+    margin-bottom:2rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.07);">
+    <h2 style="color:var(--violet); font-size:1.1rem;
+               font-weight:800; margin-bottom:.9rem;">
+      📌 À retenir – Essentiel
+    </h2>
+
+    <div class="grid2">
+      <div>
+        <p style="font-weight:700; color:var(--violet); margin-bottom:.3rem;">
+          🔗 Chaîne d'énergie MAS
+        </p>
+        <figure style="margin:.5rem 0;">
+          <img src="../images/bilan-mas.PNG"
+               alt="Bilan chaîne d'énergie MAS"
+               style="max-width:100%; border-radius:6px;
+                      box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+          <figcaption>Chaîne d'énergie complète d'un départ moteur MAS.</figcaption>
+        </figure>
+        <ul style="font-size:.88rem; margin-left:1.1rem;">
+          <li><strong>Q1</strong> sectionneur → ALIMENTER</li>
+          <li><strong>KM1</strong> contacteur → DISTRIBUER</li>
+          <li><strong>F1</strong> relais thermique → protection surcharge</li>
+          <li><strong>M</strong> moteur asynchrone → CONVERTIR</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700; color:var(--orange); margin-bottom:.3rem;">
+          🔢 Équations logiques
+        </p>
+        <div style="font-family:'Courier New'; font-size:.82rem;
+             background:#f3f4f6; border-radius:4px;
+             padding:.6rem .9rem; line-height:2.1;">
+          Sans AM : KM1 = S2·/S1·/F1<br>
+          Avec AM : KM1 = (S2+KM1)·/S1·/F1<br>
+          2 sens KM1 = (S2+KM1)·/S1·/KM2·/F1<br>
+          2 sens KM2 = (S3+KM2)·/S1·/KM1·/F1
+        </div>
+        <p style="font-weight:700; color:var(--rouge); margin:.6rem 0 .3rem;">
+          ⚠️ Inversion de sens
+        </p>
+        <p style="font-size:.88rem;">
+          Inverser <strong>deux phases</strong> (L1 et L3) sur U/V/W
+          → inversion du sens de rotation du MAS.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVIGATION BAS ── -->
+  <nav class="nav-bas">
+    <a href="activite-photovoltaique.html" class="nav-btn">
+      ← Précédent<span>2. Photovoltaïque</span>
+    </a>
+    <div class="centre">Module 1 · Activité 3 / 6 · MAS</div>
+    <a href="activite-pneumatique.html" class="nav-btn">
+      Suivant →<span>4. Pneumatique</span>
+    </a>
+  </nav>
+
+</div><!-- /page -->
+
+<footer>
+  <p>Séquence F – STI2D · Lycée ·
+  <a href="../index.html">Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>

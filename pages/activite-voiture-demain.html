@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activité 6 – La voiture de demain · Séquence F</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="inner">
+    <div class="badge">Module 1 · Activité 6 / 6</div>
+    <h1>🚗 La voiture de demain</h1>
+    <p class="meta">Séquence F · 2nde / 1re STI2D ·
+      ⏱ 3h · Travail individuel</p>
+  </div>
+</header>
+
+<!-- ── BARRE NAVIGATION ACTIVITÉS ── -->
+<nav class="nav-activites">
+  <div class="nav-activites-inner">
+    <a href="../index.html" class="nav-home-btn">⌂ Séquence F</a>
+    <span class="nav-sep">›</span>
+    <span class="nav-module-label">Module 1</span>
+    <span class="nav-sep">›</span>
+    <div class="nav-acts">
+      <a href="activite-energies.html"
+         class="nav-act">1 · Énergies</a>
+      <a href="activite-photovoltaique.html"
+         class="nav-act mod-teal">2 · Photovoltaïque</a>
+      <a href="activite-chaine-energie-MAS.html"
+         class="nav-act mod-violet">3 · MAS</a>
+      <a href="activite-pneumatique.html"
+         class="nav-act mod-orange">4 · Pneumatique</a>
+      <a href="activite-vae-voiture.html"
+         class="nav-act mod-vert">5 · VAE</a>
+      <a href="activite-voiture-demain.html"
+         class="nav-act mod-cyan active">6 · Voiture demain</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ── OBJECTIFS ── -->
+  <div class="bloc">
+    <h2>🎯 Objectif de l'activité</h2>
+    <p>
+      Développer les problématiques des nouveaux véhicules automobiles en
+      comparant leur <strong>puissance de recharge</strong> et leurs
+      <strong>émissions de CO₂</strong>.
+    </p>
+    <div style="margin-top:.8rem;">
+      <span class="tag">Travail individuel</span>
+      <span class="tag">Durée : 3h</span>
+    </div>
+  </div>
+
+  <!-- ── RESSOURCES ── -->
+  <div class="bloc bloc-ressources">
+    <h2>📥 Ressources – Documents de travail</h2>
+    <p class="bloc-intro">Télécharger les documents nécessaires :</p>
+    <ul class="liste-telechargements">
+      <li>
+        <span class="ico-pdf">📄</span>
+        <span class="doc-nom">La voiture de demain – Sujet + Document réponse</span>
+        <div class="doc-liens">
+          <a href="../docs/La voiture de demain SU_DR.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+          <a href="../docs/La voiture de demain SU_DR.pdf" download
+             class="btn-dl btn-pdf">↗ PDF</a>
+        </div>
+      </li>
+      <li>
+        <span class="ico-pdf">✅</span>
+        <span class="doc-nom">La voiture de demain – Corrigé</span>
+        <div class="doc-liens">
+          <a href="../docs/La voiture de demain SU DR COR.docx" download
+             class="btn-dl btn-word">↗ Word</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 1 – EMPREINTE CARBONE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🌍 Partie 1 – Calculer son empreinte carbone
+  </div>
+
+  <div class="notice-audio">
+    <span>🎧</span> Brancher les écouteurs avant de lancer la vidéo.
+  </div>
+
+  <div class="bloc">
+    <h2>🎬 Vidéo – Introduction à l'empreinte carbone</h2>
+    <div style="position:relative; width:100%; aspect-ratio:16/9;
+                border-radius:12px; overflow:hidden;
+                box-shadow:0 8px 24px rgba(0,0,0,0.15);">
+      <video controls preload="metadata"
+             style="position:absolute;top:0;left:0;
+                    width:100%;height:100%;
+                    object-fit:contain;background:#000;">
+        <source src="../videos/empreinte-carbone.mp4" type="video/mp4">
+        <p>Ce navigateur ne supporte pas la lecture vidéo.
+           <a href="../videos/empreinte-carbone.mp4">Télécharger la vidéo</a>.
+        </p>
+      </video>
+    </div>
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-cyan"
+         style="background:linear-gradient(90deg,var(--cyan),#00838f);">
+      <div class="num">1</div>
+      <div class="titre">Empreinte carbone personnelle</div>
+    </div>
+    <div class="exo-body">
+      <p><strong>Q1.</strong> Définir l'empreinte carbone :</p>
+      <textarea class="zone zone-sm"
+        placeholder="L'empreinte carbone est …"></textarea>
+
+      <p><strong>Q2.</strong> Calculer son empreinte sur
+        <a href="https://climate.selectra.com/estimateur"
+           target="_blank" rel="noopener"
+           style="color:var(--cyan); font-weight:600;">
+          climate.selectra.com/estimateur ↗
+        </a>
+        et noter le résultat :
+      </p>
+      <input class="ligne" type="text"
+             placeholder="Empreinte totale = … kg CO₂/an">
+
+      <p><strong>Q3.</strong> Quelle est la proportion de CO₂ liée
+        au transport ?</p>
+      <input class="ligne" type="text"
+             placeholder="Part transport = … %">
+
+      <p><strong>Q4.</strong> Proportion moyenne du transport dans l'empreinte
+        carbone en France (ADEME 2018) :</p>
+      <input class="ligne" type="text"
+             placeholder="Moyenne France ≈ … %">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q1.</strong>
+            <span class="br">Quantité totale de gaz à effet de serre
+            (CO₂ équivalent)</span> émise par une personne ou une activité
+            sur une période donnée.</p>
+          <p><strong>Q4.</strong>
+            <span class="br">~30–35 %</span>
+            (le transport représente un poste majeur des émissions
+            individuelles).
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 2 – VOITURE ÉLECTRIQUE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    ⚡ Partie 2 – La voiture électrique
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Renault Estate vs Renault Zoé</h2>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/voiture-demain-1.PNG"
+           alt="Tableau comparaison Renault Estate vs Zoé"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Renault Estate 2018 (essence) vs Renault Zoé 2018 (électrique).</figcaption>
+    </figure>
+  </div>
+
+  <!-- 2.1 Comparaison -->
+  <div class="exo">
+    <div class="exo-hdr mod-cyan"
+         style="background:linear-gradient(90deg,var(--cyan),#00838f);">
+      <div class="num">2.1</div>
+      <div class="titre">Énergie stockée, densité et consommation</div>
+    </div>
+    <div class="exo-body">
+      <div class="def">
+        <strong>Équivalence :</strong> 1 L essence = 9,63 kWh
+      </div>
+
+      <p><strong>Q5.</strong> Énergie stockée et densité énergétique :</p>
+      <table class="tl" style="margin:.6rem 0;">
+        <thead>
+          <tr>
+            <th class="gauche">Véhicule</th>
+            <th>Énergie stockée (kWh)</th>
+            <th>Densité (kWh/kg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Estate (essence)</td>
+            <td><input type="number" placeholder="…"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Zoé (batterie)</td>
+            <td><input type="number" placeholder="41 kWh"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Q6.</strong> Consommation hiver (kWh/100 km) :</p>
+      <table class="tl" style="margin:.6rem 0;">
+        <thead>
+          <tr>
+            <th class="gauche">Véhicule</th>
+            <th>Consommation (kWh/100 km)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Estate</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Zoé hiver</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Pourquoi ces valeurs sont-elles différentes ?</p>
+      <textarea class="zone zone-sm"
+        placeholder="Le moteur électrique a un rendement … alors que le moteur thermique …">
+      </textarea>
+
+      <p><strong>Q7.</strong> Puissance de recharge :</p>
+      <table class="tl" style="margin:.6rem 0;">
+        <thead>
+          <tr>
+            <th class="gauche">Scénario</th>
+            <th>Puissance (kW)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Estate (plein 3 min)</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Zoé 80 % en 1h40</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Zoé 100 % en 16h</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q5.</strong>
+            Estate : 45 × 9,63 = <span class="br">433 kWh</span> ·
+            densité = 433/50 = <span class="br">8,66 kWh/kg</span><br>
+            Zoé : <span class="br">41 kWh</span> ·
+            densité = 41/305 = <span class="br">0,13 kWh/kg</span>
+          </p>
+          <p><strong>Q6.</strong>
+            Estate : 5,57 × 10,74 = <span class="br">~59,8 kWh/100 km</span><br>
+            Zoé hiver : <span class="br">~16 kWh/100 km</span><br>
+            Le moteur électrique a un
+            <span class="br">rendement bien supérieur</span>
+            (~90 %) au moteur thermique (~30 %).
+          </p>
+          <p><strong>Q7.</strong>
+            Estate : 433 / (3/60) = <span class="br">~8 660 kW</span>
+            (≈ 8,7 MW — impossible avec la Zoé !)<br>
+            Zoé 80 % : 32,8 / 1,67 = <span class="br">~19,6 kW</span><br>
+            Zoé 100 % : 41 / 16 = <span class="br">~2,6 kW</span>
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 2.2 CO2 + avantages -->
+  <div class="exo">
+    <div class="exo-hdr mod-cyan"
+         style="background:linear-gradient(90deg,var(--cyan),#00838f);">
+      <div class="num">2.2</div>
+      <div class="titre">Émissions CO₂/km et étiquettes énergétiques</div>
+    </div>
+    <div class="exo-body">
+      <div class="def">
+        <strong>Données :</strong>
+        émission électrique : 52 g CO₂/kWh ·
+        1 kg essence → 2,28 kg CO₂
+      </div>
+
+      <p><strong>Q8.</strong> Calculer les émissions CO₂/km :</p>
+      <table class="tl" style="margin:.6rem 0;">
+        <thead>
+          <tr>
+            <th class="gauche">Véhicule</th>
+            <th>Calcul</th>
+            <th>g CO₂/km</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Zoé</td>
+            <td><input type="text" placeholder="16 × 52 / 1000 = …"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Estate</td>
+            <td><input type="text" placeholder="5/100 × 2280/1000 × …"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/voiture-demain-2.PNG"
+             alt="Étiquettes à compléter"
+             style="max-width:100%; border-radius:6px;
+                    box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+        <figcaption>Compléter les étiquettes des deux voitures.</figcaption>
+      </figure>
+
+      <p><strong>Q9.</strong> Avantages / Inconvénients de la voiture électrique :</p>
+      <textarea class="zone"
+        placeholder="Avantages : faible CO₂/km, silencieuse, entretien réduit…&#10;Inconvénients : autonomie limitée, recharge lente, coût batterie…">
+      </textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q8.</strong>
+            Zoé : 16 × 52 / 1 000 = <span class="br">0,83 g CO₂/km</span><br>
+            Estate : (5/100) × (2 280/1 000) × 1 000 =
+            <span class="br">114 g CO₂/km</span>
+          </p>
+          <p><strong>Q9. Avantages :</strong>
+            <span class="br">faible CO₂/km</span>,
+            silencieuse, entretien réduit, accélérations vives.<br>
+            <strong>Inconvénients :</strong>
+            <span class="br">autonomie limitée</span>,
+            recharge lente, coût batterie, poids élevé.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 2 bis – FRANCE TOUT ÉLECTRIQUE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    🔌 Partie 2 bis – Une France tout électrique ?
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-cyan"
+         style="background:linear-gradient(90deg,var(--cyan),#00838f);">
+      <div class="num">2 bis</div>
+      <div class="titre">Scénario : 38 millions de Zoé sur le réseau</div>
+    </div>
+    <div class="exo-body">
+      <div class="tip">
+        <a href="http://www.rte-france.com/fr/eco2mix/eco2mix-co2"
+           target="_blank" rel="noopener"
+           style="color:var(--bleu); font-weight:600;">
+          ↗ Consulter RTE Eco2mix (puissance réseau France)
+        </a>
+      </div>
+
+      <p><strong>Q10.</strong> Puissance totale France (RTE, 19h hier) :</p>
+      <input class="ligne" type="text"
+             placeholder="Puissance totale = … MW">
+
+      <p><strong>Q11.</strong> Recharge simultanée de 3,8 M de Zoé
+        (recharge complète 16h) :</p>
+      <input class="ligne" type="text"
+             placeholder="Puissance totale = 3 800 000 × 2,6 kW = … MW">
+      <textarea class="zone zone-sm"
+        placeholder="Commentaire : cela représente … % de la puissance nationale …">
+      </textarea>
+
+      <p><strong>Q12.</strong> Combien de Zoé peut-on recharger simultanément
+        en 3 min (puissance = 8 660 kW/voiture) ?</p>
+      <input class="ligne" type="text"
+             placeholder="Nb = puissance réseau / 8 660 = … voitures">
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q10.</strong> Valeur typique soir :
+            <span class="br">~60 000 MW</span>.</p>
+          <p><strong>Q11.</strong>
+            3 800 000 × 2,6 = <span class="br">9 880 MW</span>
+            → ~<span class="br">16 %</span> de la puissance nationale !
+            Risque de <span class="br">saturation du réseau</span>.</p>
+          <p><strong>Q12.</strong>
+            60 000 000 / 8 660 ≈
+            <span class="br">~6 900 voitures</span>
+            simultanément → impossible pour 38 M voitures !
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 3 – LIMITES VOITURE ÉLECTRIQUE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    ⚠️ Partie 3 – Limites de la voiture électrique
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-cyan"
+         style="background:linear-gradient(90deg,var(--cyan),#00838f);">
+      <div class="num">3</div>
+      <div class="titre">Énergie verte, réseau et batteries</div>
+    </div>
+    <div class="exo-body">
+      <p><strong>Q13.</strong> Définir l'expression « énergie verte » :</p>
+      <textarea class="zone zone-sm"
+        placeholder="Énergie produite sans …"></textarea>
+
+      <p><strong>Q14.</strong> Combien de centrales nucléaires de 900 MW
+        faudrait-il pour charger 3,8 M de Zoé en 16h ?</p>
+      <input class="ligne" type="text"
+             placeholder="Nb centrales = 9 880 / 900 = …">
+
+      <p><strong>Q15.</strong> Combien de centrales pour charger 38 M de voitures
+        en 3 min ?</p>
+      <input class="ligne" type="text"
+             placeholder="Nb = …">
+
+      <p><strong>Q16.</strong> Quel « bon point » de la voiture électrique est
+        remis en cause par
+        <a href="https://alternativi.fr/les-batteries-des-voitures-electriques-sont-elles-propres/589"
+           target="_blank" rel="noopener"
+           style="color:var(--cyan); font-weight:600;">
+          cet article ↗
+        </a> ?
+      </p>
+      <textarea class="zone zone-sm"
+        placeholder="Réponse…"></textarea>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q13.</strong>
+            <span class="br">Énergie produite sans émission de gaz à effet de serre</span>
+            (renouvelables, nucléaire).</p>
+          <p><strong>Q14.</strong>
+            9 880 / 900 ≈ <span class="br">11 centrales</span>.</p>
+          <p><strong>Q15.</strong>
+            Pour 38 M voitures × 8 660 kW = 329 000 GW →
+            <span class="br">complètement irréaliste</span>
+            avec le réseau actuel.</p>
+          <p><strong>Q16.</strong>
+            La <span class="br">production des batteries</span> est très polluante :
+            extraction de lithium, cobalt, impact environnemental important.
+            L'aspect « zéro émission » est donc
+            <span class="br">relatif sur le cycle de vie</span>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       PARTIE 4 – VOITURE À HYDROGÈNE
+  ══════════════════════════════════ -->
+  <div class="section-titre">
+    💧 Partie 4 – La voiture à hydrogène
+  </div>
+
+  <div class="bloc">
+    <h2>Apport de connaissance – Caractéristiques H₂</h2>
+    <div class="grid2">
+      <div class="cours" style="margin:0;">
+        <h3>⚗️ Données techniques</h3>
+        <ul style="font-size:.88rem; margin:.4rem 0 0 1rem;">
+          <li>Réservoir : 4,5 kg H₂ à 700 bars (105 L)</li>
+          <li>Consommation : 21 L H₂/100 km</li>
+          <li>Autonomie : 500 km</li>
+          <li>Recharge : 3 min</li>
+        </ul>
+      </div>
+      <div class="cours" style="margin:0;
+           background:var(--vert-pale); border-color:var(--vert);">
+        <h3 style="color:var(--vert);">🔋 Énergie H₂</h3>
+        1 kg H₂ =
+        <strong style="color:var(--vert);">33,3 kWh</strong><br>
+        Densité massique très élevée
+      </div>
+    </div>
+    <figure style="text-align:center; margin:1rem 0;">
+      <img src="../images/voiture-demain-3.PNG"
+           alt="Caractéristiques voiture hydrogène"
+           style="max-width:100%; border-radius:6px;
+                  box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+      <figcaption>Caractéristiques de la voiture à hydrogène.</figcaption>
+    </figure>
+  </div>
+
+  <div class="exo">
+    <div class="exo-hdr mod-cyan"
+         style="background:linear-gradient(90deg,var(--cyan),#00838f);">
+      <div class="num">4</div>
+      <div class="titre">Pile à combustible – Énergie, émissions et coût</div>
+    </div>
+    <div class="exo-body">
+      <p><strong>Q17.</strong> Comment l'H₂ est-il transformé en électricité ?</p>
+      <textarea class="zone zone-sm"
+        placeholder="La pile à combustible …"></textarea>
+
+      <p><strong>Q18.</strong> Énergie stockée et consommation :</p>
+      <table class="tl" style="margin:.6rem 0;">
+        <thead>
+          <tr>
+            <th class="gauche">Grandeur</th>
+            <th>Calcul</th>
+            <th>Résultat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Énergie stockée (kWh)</td>
+            <td><input type="text" placeholder="4,5 × 33,3 = …"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Conso L essence éq./100 km</td>
+            <td><input type="text" placeholder="…"></td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Q19.</strong> Étiquette H₂ – émissions CO₂/km
+        (52 g/kWh) :</p>
+      <input class="ligne" type="text"
+             placeholder="Émissions = … × 52 / 1 000 = … g CO₂/km">
+      <figure style="text-align:center; margin:1rem 0;">
+        <img src="../images/etiquette_h2_modele.png"
+             alt="Étiquette H₂ à compléter"
+             style="max-width:420px; width:100%; border-radius:8px;
+                    box-shadow:0 4px 12px rgba(0,0,0,0.12);">
+        <figcaption>Compléter l'étiquette de la voiture hydrogène.</figcaption>
+      </figure>
+
+      <p><strong>Q20.</strong> Coût €/km (H₂ à 15 €/kg) :</p>
+      <input class="ligne" type="text"
+             placeholder="Coût H₂ = (21/100) × (4,5/7) × 15 = … €/km">
+
+      <table class="tl" style="margin:.8rem 0;">
+        <thead>
+          <tr>
+            <th class="gauche">Véhicule</th>
+            <th>Coût €/km</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Hydrogène</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Zoé (électrique)</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+          <tr>
+            <td class="gauche">Estate (essence)</td>
+            <td><input type="number" placeholder="…"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="cor">
+        <summary></summary>
+        <div class="cb">
+          <p><strong>Q17.</strong>
+            <span class="br">Pile à combustible H₂ + O₂ → H₂O + électricité</span>
+            (réaction électrochimique directe, sans combustion).</p>
+          <p><strong>Q18.</strong>
+            Énergie = 4,5 × 33,3 = <span class="br">~150 kWh</span><br>
+            Conso L éq. : 21 L H₂/100 km ×
+            <span class="br">~29 L essence/100 km</span>
+            (haute consommation volumique).
+          </p>
+          <p><strong>Q19.</strong>
+            <span class="br">~2,4 g CO₂/km</span>
+            (très faible si H₂ « vert »).
+          </p>
+          <p><strong>Q20.</strong>
+            H₂ : ~<span class="br">0,20 €/km</span><br>
+            Zoé : ~<span class="br">0,002 €/km</span><br>
+            Estate : ~<span class="br">0,085 €/km</span>
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ── À RETENIR ── -->
+  <section style="background:var(--blanc);
+    border:2px solid var(--cyan);
+    border-left:6px solid var(--cyan);
+    border-radius:8px; padding:1.4rem 1.8rem;
+    margin-bottom:2rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.07);">
+    <h2 style="color:var(--cyan); font-size:1.1rem;
+               font-weight:800; margin-bottom:.9rem;">
+      📌 À retenir – Bilan comparatif des technologies
+    </h2>
+
+    <div style="overflow-x:auto; margin-bottom:1rem;">
+      <table class="tl">
+        <thead>
+          <tr>
+            <th class="gauche">Critère</th>
+            <th>Essence (Estate)</th>
+            <th>Électrique (Zoé)</th>
+            <th>Hydrogène</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="gauche">Autonomie</td>
+            <td><strong>900 km</strong></td>
+            <td>200–300 km</td>
+            <td><strong>500 km</strong></td>
+          </tr>
+          <tr>
+            <td class="gauche">Temps recharge</td>
+            <td><strong>3 min</strong></td>
+            <td>16h / 1h40</td>
+            <td><strong>3 min</strong></td>
+          </tr>
+          <tr>
+            <td class="gauche">CO₂/km</td>
+            <td>114 g</td>
+            <td><strong>0,8 g</strong></td>
+            <td>~2 g (H₂ vert)</td>
+          </tr>
+          <tr>
+            <td class="gauche">Densité énergétique</td>
+            <td><strong>8,7 kWh/kg</strong></td>
+            <td>0,13 kWh/kg</td>
+            <td><strong>33 kWh/kg</strong></td>
+          </tr>
+          <tr>
+            <td class="gauche">Coût/km</td>
+            <td>~0,085 €</td>
+            <td><strong>~0,002 €</strong></td>
+            <td>0,20 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid2">
+      <div>
+        <p style="font-weight:700; color:var(--cyan); margin-bottom:.3rem;">
+          ⚡ Voiture électrique
+        </p>
+        <ul style="font-size:.88rem; margin-left:1.1rem;">
+          <li>✅ CO₂/km très faible, coût mini</li>
+          <li>❌ Autonomie limitée, recharge lente</li>
+          <li>❌ Batteries polluantes à produire</li>
+          <li>❌ Réseau insuffisant si généralisation</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700; color:var(--bleu); margin-bottom:.3rem;">
+          💧 Voiture hydrogène
+        </p>
+        <ul style="font-size:.88rem; margin-left:1.1rem;">
+          <li>✅ Recharge rapide (3 min)</li>
+          <li>✅ Bonne autonomie (500 km)</li>
+          <li>❌ Coût élevé (~0,20 €/km)</li>
+          <li>❌ Stockage 700 bars, H₂ vert rare</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fml-bloc" style="margin-top:1rem;">
+      <div class="fml" style="font-size:.9rem; text-align:left; padding:.5rem 1rem;">
+        E_réservoir = V(L) × 9,63 kWh/L ·
+        Densité = E / m ·
+        P_recharge = E / t(h) ·
+        CO₂/km = (kWh/100km × g/kWh) / 100
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVIGATION BAS ── -->
+  <nav class="nav-bas">
+    <a href="activite-vae-voiture.html" class="nav-btn">
+      ← Précédent<span>5. VAE</span>
+    </a>
+    <div class="centre">Module 1 · Activité 6 / 6 · Voiture demain</div>
+    <a href="../index.html" class="nav-btn">
+      ⌂ Retour accueil<span>Séquence F</span>
+    </a>
+  </nav>
+
+</div><!-- /page -->
+
+<footer>
+  <p>Séquence F – STI2D · Lycée ·
+  <a href="../index.html">Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>
