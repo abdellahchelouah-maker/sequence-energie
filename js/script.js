@@ -2,6 +2,13 @@
 let chartIV, chartPV;
 
 function updateCharts() {
+  // Vérifier que les éléments canvas existent
+  const ivChartElement = document.getElementById('ivChart');
+  const pvChartElement = document.getElementById('pvChart');
+  if (!ivChartElement || !pvChartElement) {
+    return; // Quitter si les canvas n'existent pas
+  }
+  
   const uInputs = document.querySelectorAll('.u-val');
   const iInputs = document.querySelectorAll('.i-val');
   let voltages = [], currents = [], powers = [];
@@ -19,7 +26,7 @@ function updateCharts() {
   
   // Courbe I vs U
   if(chartIV) chartIV.destroy();
-  const ctxIV = document.getElementById('ivChart').getContext('2d');
+  const ctxIV = ivChartElement.getContext('2d');
   chartIV = new Chart(ctxIV, {
     type: 'line',
     data: {
@@ -46,7 +53,7 @@ function updateCharts() {
   
   // Courbe P vs U
   if(chartPV) chartPV.destroy();
-  const ctxPV = document.getElementById('pvChart').getContext('2d');
+  const ctxPV = pvChartElement.getContext('2d');
   chartPV = new Chart(ctxPV, {
     type: 'line',
     data: {
@@ -72,14 +79,9 @@ function updateCharts() {
   });
 }
 
-// Mise à jour automatique à chaque saisie
-document.addEventListener('input', updateCharts);
-// script.js - Version robuste
+// Mise à jour automatique à chaque saisie - dans DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
-  
-  // Traceur I-V / P-V (code précédent)
-  let chartIV, chartPV;
-  function updateCharts() { /* code Chart.js précédent */ }
+  // Attacher l'événement 'input' au DOM prêt
   document.addEventListener('input', updateCharts);
   
   // Fonction toggleCorrection universelle
