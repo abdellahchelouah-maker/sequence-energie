@@ -3,7 +3,7 @@ hr { color: #000000}
 body, table, span.rvts0 /* Normal text */
 {
  font-size: 10pt;
- font-family: 'Arial', 'Helvetica', sans-serif;
+ font-family: 'Verdana', 'Geneva', 'Arial', 'Helvetica', sans-serif;
  font-style: normal;
  font-weight: normal;
  color: #000000;
@@ -46,7 +46,7 @@ span.rvts7
 span.rvts8
 {
  font-size: 15pt;
- font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  font-weight: bold;
  color: #696969;
 }
@@ -73,30 +73,30 @@ span.rvts12
 span.rvts13
 {
  font-size: 14pt;
- color: ;
+ color: #000000;
 }
 span.rvts14
 {
  font-size: 22pt;
- font-family: 'Arial Rounded MT Bold';
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  font-weight: bold;
  color: #ffffff;
 }
 span.rvts15
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #000000;
 }
 span.rvts16 /* Font Style */
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
 }
 span.rvts17
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  background-color: #ffffff;
 }
 span.rvts18
@@ -113,13 +113,13 @@ a.rvts19, span.rvts19
 a.rvts19:hover { color: #0000ff; }
 span.rvts20 /* Font Style */
 {
- font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  font-style: italic;
  color: #c0c0c0;
 }
 a.rvts21, span.rvts21 /* Font Style */
 {
- font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  font-style: italic;
  color: #6666ff;
  text-decoration: underline;
@@ -137,20 +137,20 @@ span.rvts23
 span.rvts24
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #000000;
 }
 a.rvts25, span.rvts25
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #000000;
  text-decoration: none;
 }
 a.rvts26, span.rvts26
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #0000ff;
  text-decoration: underline;
 }
@@ -158,56 +158,56 @@ a.rvts26:hover { color: #0000ff; }
 span.rvts27
 {
  font-size: 18pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  font-weight: bold;
  color: #ff0000;
 }
 span.rvts28
 {
  font-size: 11pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
 }
 span.rvts29
 {
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
 }
 span.rvts30
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  font-weight: bold;
  color: #ff0000;
 }
 span.rvts31
 {
  font-size: 9pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  vertical-align: super;
 }
 span.rvts32
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #000000;
 }
 span.rvts33
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #000000;
  background-color: #ffff00;
 }
 span.rvts34
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #000000;
  background-color: #ffffff;
 }
 span.rvts35
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  background-color: #ffff00;
 }
 span.rvts36
@@ -217,12 +217,12 @@ span.rvts36
 span.rvts37
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
 }
 a.rvts38, span.rvts38
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #0000ff;
  text-decoration: underline;
 }
@@ -230,7 +230,7 @@ a.rvts38:hover { color: #0000ff; }
 a.rvts39, span.rvts39
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #0000ff;
  text-decoration: none;
 }
@@ -238,7 +238,7 @@ a.rvts39:hover { color: #0000ff; }
 a.rvts40, span.rvts40
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #000000;
  text-decoration: none;
 }
@@ -246,18 +246,20 @@ a.rvts40:hover { color: #0000ff; }
 span.rvts41
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #ff0000;
 }
 a.rvts42, span.rvts42
 {
  font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #0000ff;
  text-decoration: underline;
 }
 a.rvts42:hover { color: #0000ff; }
 a.rvts43, span.rvts43
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #0000ff;
  text-decoration: underline;
 }
@@ -265,6 +267,7 @@ a.rvts43:hover { color: #0000ff; }
 a.rvts44, span.rvts44
 {
  font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  color: #0000ff;
  text-decoration: underline;
 }
@@ -272,12 +275,13 @@ a.rvts44:hover { color: #0000ff; }
 span.rvts45
 {
  font-size: 14pt;
- font-family: 'Comic Sans MS', cursive;
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-decoration: underline;
 }
 /* ========== Para Styles ========== */
 p,ul,ol /* Paragraph Style */
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-align: left;
  text-indent: 0px;
  padding: 0px 0px 0px 0px;
@@ -285,18 +289,22 @@ p,ul,ol /* Paragraph Style */
 }
 .rvps1 /* Centered */
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-align: center;
 }
 .rvps2
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-align: center;
  background: #666699;
 }
 .rvps3 /* Paragraph Style */
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
 }
 .rvps4 /* Paragraph Style */
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-align: center;
  border-color: #c0c0c0;
  border-style: solid;
@@ -308,19 +316,23 @@ p,ul,ol /* Paragraph Style */
 }
 .rvps5
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-indent: 28px;
  line-height: 1.15;
 }
 .rvps6
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-indent: 47px;
  line-height: 1.15;
 }
 .rvps7
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  line-height: 1.15;
 }
 .rvps8
 {
+ font-family: 'Verdana', 'Geneva', 'Arial', sans-serif;
  text-align: center;
 }

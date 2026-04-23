@@ -1,0 +1,116 @@
+body {
+    background-color: #f8f9fa;
+    overflow: auto;
+    width: 100%;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Améliorations subtiles pour une meilleure lisibilité */
+#topic_header {
+    background-color: #4a5568;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#topic_header_content h1 {
+    color: white;
+    font-weight: 600;
+}
+
+#topic_breadcrumb a {
+    color: #a0aec0;
+    text-decoration: none;
+}
+
+#topic_breadcrumb a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#topic_content {
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Liens améliorés */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Boutons améliorés */
+.apple-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.apple-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Cards pour les vidéos */
+.video-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    transition: all 0.2s ease;
+}
+
+.video-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.video-number {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+/* Instructions */
+.instructions {
+    background-color: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #topic_content {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+}

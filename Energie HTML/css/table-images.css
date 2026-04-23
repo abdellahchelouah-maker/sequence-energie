@@ -1,0 +1,177 @@
+/* Amélioration des tableaux et images pour tout le mini-site */
+
+/* Styles pour les tableaux */
+table {
+    width: 90%;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #2d3748;
+    border-bottom: 2px solid #cbd5e0;
+}
+
+td {
+    color: #4a5568;
+    vertical-align: top;
+}
+
+/* Alternance des lignes pour meilleure lisibilité */
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tr:hover {
+    background-color: #edf2f7;
+}
+
+/* Centrage du contenu des cellules */
+table.center-content td,
+table.center-content th {
+    text-align: center;
+}
+
+/* Tableaux spécifiques avec centrage */
+table.data-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Styles pour les images */
+img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Images spécifiques avec styles différents */
+img.thumbnail {
+    border: 2px solid #e2e8f0;
+    padding: 4px;
+    background: white;
+}
+
+img.diagram {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+}
+
+img.screenshot {
+    border: 1px solid #a0aec0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Conteneurs pour centrer les images */
+.image-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.image-container img {
+    display: inline-block;
+    margin: 0;
+}
+
+/* Légendes pour les images */
+.image-caption {
+    text-align: center;
+    font-size: 12px;
+    color: #718096;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Tableaux avec bordures améliorées */
+table.bordered {
+    border: 2px solid #cbd5e0;
+}
+
+table.bordered th,
+table.bordered td {
+    border: 1px solid #cbd5e0;
+}
+
+/* Tableaux compacts */
+table.compact th,
+table.compact td {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* Responsive pour les tableaux */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+        margin: 1rem auto;
+        font-size: 13px;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Conteneur scrollable pour tableaux larges */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.table-wrapper table {
+    margin: 0;
+}
+
+/* Styles pour les tableaux de données techniques */
+.technical-table {
+    background: #f8fafc;
+}
+
+.technical-table th {
+    background: #2d3748;
+    color: white;
+}
+
+.technical-table tr:nth-child(even) {
+    background: #edf2f7;
+}
+
+/* Animation subtile au hover */
+table tr {
+    transition: background-color 0.2s ease;
+}
+
+img {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}

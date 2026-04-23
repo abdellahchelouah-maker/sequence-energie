@@ -1,0 +1,121 @@
+/* Styles pour le lecteur vidéo moderne */
+.modern-video-container {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 720px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modern-video-container h3 {
+    color: white;
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modern-video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: #000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles pour les contrôles vidéo personnalisés */
+.modern-video-container video::-webkit-media-controls-panel {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 8px 8px;
+}
+
+.modern-video-container video::-webkit-media-controls-play-button,
+.modern-video-container video::-webkit-media-controls-timeline,
+.modern-video-container video::-webkit-media-controls-current-time-display,
+.modern-video-container video::-webkit-media-controls-time-remaining-display,
+.modern-video-container video::-webkit-media-controls-mute-button,
+.modern-video-container video::-webkit-media-controls-toggle-closed-captions-button,
+.modern-video-container video::-webkit-media-controls-volume-slider {
+    filter: brightness(1.2);
+}
+
+/* Message d'erreur */
+.modern-video-container .error-message {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.modern-video-container .error-message h3 {
+    margin-bottom: 15px;
+    color: #ff6b6b;
+}
+
+.modern-video-container .error-message p {
+    margin: 10px 0;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .modern-video-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .modern-video-container h3 {
+        font-size: 16px;
+    }
+}
+
+/* Animation de chargement */
+.modern-video-container.loading {
+    position: relative;
+}
+
+.modern-video-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Styles pour les boutons de téléchargement alternatif */
+.video-download-hint {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+}
+
+.video-download-hint a {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.video-download-hint a:hover {
+    text-decoration: underline;
+}
