@@ -79,11 +79,71 @@ function updateCharts() {
   });
 }
 
+async function repairBrokenMediaUrls() {
+  const repoOwner = 'abdellahchelouah-maker';
+  const repoName = 'sequence-energie';
+  const folders = ['images', 'videos'];
+  const repoFiles = {};
+
+  for (const folder of folders) {
+    try {
+      const response = await fetch(
+        `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folder}?ref=main`,
+        { headers: { Accept: 'application/vnd.github+json' } }
+      );
+
+      if (!response.ok) continue;
+      const data = await response.json();
+      repoFiles[folder] = Array.isArray(data) ? data.map(item => item.name) : [];
+    } catch (error) {
+      console.warn(`Impossible de lister le dossier ${folder} :`, error);
+    }
+  }
+
+  const mediaNodes = document.querySelectorAll('img, video');
+
+  mediaNodes.forEach((node) => {
+    const currentSrc = node.getAttribute('src') || node.getAttribute('poster');
+    if (!currentSrc) return;
+
+    const match = currentSrc.match(/(?:^|\/)(images|videos)\/([^/?#]+)/i);
+    if (!match) return;
+
+    const folder = match[1].toLowerCase();
+    const requestedName = decodeURIComponent(match[2]);
+    const fileList = repoFiles[folder];
+
+    if (!fileList || !fileList.length) return;
+
+    const exactMatch = fileList.find((fileName) => fileName.toLowerCase() === requestedName.toLowerCase());
+    if (!exactMatch) return;
+
+    const correctedUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${folder}/${exactMatch}`;
+
+    if (node.tagName === 'IMG') {
+      if (!node.complete || node.naturalWidth === 0) {
+        node.src = correctedUrl;
+      }
+    } else if (node.tagName === 'VIDEO') {
+      node.src = correctedUrl;
+      const currentPoster = node.getAttribute('poster');
+      if (currentPoster && currentPoster.includes(`/${folder}/`)) {
+        const posterBase = currentPoster.split('/').pop();
+        const posterMatch = fileList.find((fileName) => fileName.toLowerCase() === posterBase.toLowerCase());
+        if (posterMatch) {
+          node.poster = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/main/${folder}/${posterMatch}`;
+        }
+      }
+    }
+  });
+}
+
 // Mise à jour automatique à chaque saisie - dans DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
   // Attacher l'événement 'input' au DOM prêt
   document.addEventListener('input', updateCharts);
-  
+  repairBrokenMediaUrls();
+
   // Fonction toggleCorrection universelle
   window.toggleCorrection = function(id) {
     const bloc = document.getElementById(id);
